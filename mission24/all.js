@@ -27,9 +27,21 @@ function addTransactionDom(transaction) {
 }
 
 
+function updateValue() {
+	const amounts = transactions.map(transaction => transaction.amount)
+	const total = amounts.reduce((acc, item) => (acc+=item), 0).toFixed(2)
+	const income = amounts.filter(item => item> 0 ).reduce((acc, item) => (acc+=item),0).toFixed(2)
+	const expense = amounts.filter(item => item< 0 ).reduce((acc, item) => (acc+=item),0)* -1
+  
+	balance.innerHTML = `${total}`
+	moneyPlus.innerHTML = `${income}`
+	moneyMinus.innerHTML = `${expense}`
+}
+
 function init() {
 	list.innerHTML = ''
 	transactions.forEach(addTransactionDom)
+	updateValue()
 }
 init()
 
