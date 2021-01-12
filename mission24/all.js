@@ -21,7 +21,7 @@ function addTransactionDom(transaction) {
 	const item = document.createElement('li')
 	// console.log(item)
 	item.classList.add(transaction.amount>0 ? 'plus' : 'minus')
-	item.innerHTML = `${transaction.text}<span>${sign}${Math.abs(transaction.amount)}<button class='delete-btn'>X</button></span>`
+	item.innerHTML = `${transaction.text}<span>${sign}${Math.abs(transaction.amount)}<button class='delete-btn' onclick='removeTransaction(${transaction.id})'>X</button></span>`
   
 	list.appendChild(item)
 }
@@ -37,6 +37,11 @@ function updateValue() {
 	moneyPlus.innerHTML = `${income}`
 	moneyMinus.innerHTML = `${expense}`
 }
+
+function removeTransaction(id) {
+	transactions = transactions.filter(transaction => transaction.id !== id)
+}
+
 
 function init() {
 	list.innerHTML = ''
@@ -55,6 +60,13 @@ function addTransaction(e){
 			text: text.value,
 			amount: +amount.value
 		}
+    
+		transactions.push(transaction)
+		addTransactionDom(transaction)
+		updateValue()
+    
+		text.value = ''
+		amount.value = ''
 	}
 }
 
