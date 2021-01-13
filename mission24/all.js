@@ -30,11 +30,14 @@ function addTransaction(e) {
 			amount: +amount.value
 		}
     
-		// 將新增的物件加入到 transactions 物陣列內
+		// 將新增的 transaction 物件加入到 transactions 物陣列內
 		transactions.push(transaction)
     
 		// 執行 addTransactionDOM 函式，並帶入transaction
 		addTransactionDOM(transaction)
+    
+		// 執行帶值跟計算
+		updateValue()
     
 		// 輸入完後恢復空值
 		text.value = ''
@@ -55,19 +58,19 @@ function addTransactionDOM(transaction) {
 	const item = document.createElement('li')
 	// console.log(item)
   
-	// 將 classname 新增到 item ，判斷顯示的顏色
+	// 將 className 新增到 item ，判斷顯示的顏色
 	item.classList.add(transaction.amount > 0 ? 'plus' : 'minus')
   
-  
-	item.innerHTML = `${transaction.text}<span>${sign}${Math.abs(transaction.amount)}</span><button class='delete-btn'>X</button>`
+	// removeTransaction 要綁id ，不然會刪到同名的
+	item.innerHTML = `${transaction.text}<span>${sign}${Math.abs(transaction.amount)}</span><button class='delete-btn' onclick='removeTransaction(${transaction.id})'>X</button>`
 	list.appendChild(item)
 }
 
 function updateValue(){
-	const amounts = transaction.map( transaction => transaction.amount)
+	const amounts = transactions.map( transaction => transaction.amount)
 
 	// 計算總結
-	const total = amount
+	const total = amounts
 		.reduce((acc, item) => (acc+= item), 0)
 		.toFixed(2)
 
@@ -88,9 +91,17 @@ function updateValue(){
 	moneyMinus.innerHTML = `${expense}`
 }
 
+// removeTransaction
+function removeTransaction(id){ //記得帶 id 參數，不然會 fail
+//邏輯??
+	transactions = transactions.filter(transaction  => transaction.id !== id)
+
+	init()
+}
 
 // 初始化
 function init() {
+	// 輸入完之後 list 要回復空值
 	list.innerHTML = ''
 
 	// 將假資料丟到 addTransactionDOM 函式裡面運算
