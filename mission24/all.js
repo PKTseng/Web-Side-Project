@@ -7,12 +7,16 @@ const text = document.querySelector('#text')
 const form = document.querySelector('#form')
 const amount = document.querySelector('#amount')
 
+// 給假資料
 // const dummyTransactions = [
 // 	{ id: 1, text: 'Flower', amount: -20 },
 // 	{ id: 2, text: 'Salary', amount: 300 },
 // 	{ id: 3, text: 'Book', amount: -10 },
 // 	{ id: 4, text: 'Camera', amount: 150 }
 // ]
+
+// 將假資料暫時帶入 transaction 裡面
+// let transactions = dummyTransactions
 
 const localStorageTransactions = JSON.parse(localStorage.getItem('transactions'))
 let transactions = localStorage.getItem('transactions') !== null? localStorageTransactions: []
@@ -21,6 +25,7 @@ let transactions = localStorage.getItem('transactions') !== null? localStorageTr
 function addTransaction(e) {
 	e.preventDefault()
 
+	// 先判斷輸入是否為空值，若不是則繼續執行
 	if (text.value === '' || amount.value === '') {
 		alert('請重新輸入')
 	} else {
@@ -28,7 +33,7 @@ function addTransaction(e) {
 		const transaction = {
 			id: generateID(),
 			text: text.value,
-			amount: +amount.value
+			amount: +amount.value//前面的+是為了轉成 number 型別
 		}
     
 		// 將新增的 transaction 物件加入到 transactions 物陣列內
@@ -51,6 +56,7 @@ function generateID() {
 	return Math.floor(Math.random()*1000000)
 }
 
+// 新增 dom list 項目
 function addTransactionDOM(transaction) {
 	// 判斷正負值
 	const sign = transaction.amount > 0 ? '+' : '-'
@@ -67,6 +73,7 @@ function addTransactionDOM(transaction) {
 	list.appendChild(item)
 }
 
+// 更新收入與支出
 function updateValue(){
 	const amounts = transactions.map( transaction => transaction.amount)
 
@@ -97,6 +104,7 @@ function removeTransaction(id){ //記得帶 id 參數，不然會 fail
 //邏輯??
 	transactions = transactions.filter(transaction  => transaction.id !== id)
 
+	// 刪除後重新儲存在本地端
 	updateLocalStorage()
 	init()
 }
@@ -119,4 +127,5 @@ function init() {
 
 init()
 
+// 對 form 表單進行事件監聽
 form.addEventListener('submit', addTransaction)
