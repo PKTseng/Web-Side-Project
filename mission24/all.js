@@ -7,14 +7,15 @@ const text = document.querySelector('#text')
 const form = document.querySelector('#form')
 const amount = document.querySelector('#amount')
 
-const dummyTransactions = [
-	{ id: 1, text: 'Flower', amount: -20 },
-	{ id: 2, text: 'Salary', amount: 300 },
-	{ id: 3, text: 'Book', amount: -10 },
-	{ id: 4, text: 'Camera', amount: 150 }
-]
+// const dummyTransactions = [
+// 	{ id: 1, text: 'Flower', amount: -20 },
+// 	{ id: 2, text: 'Salary', amount: 300 },
+// 	{ id: 3, text: 'Book', amount: -10 },
+// 	{ id: 4, text: 'Camera', amount: 150 }
+// ]
 
-let transactions = dummyTransactions
+const localStorageTransactions = JSON.parse(localStorage.getItem('transactions'))
+let transactions = localStorage.getItem('transactions') !== null? localStorageTransactions: []
 
 // 監聽 addTransaction 的事件
 function addTransaction(e) {
@@ -38,7 +39,7 @@ function addTransaction(e) {
     
 		// 執行帶值跟計算
 		updateValue()
-    
+		updateLocalStorage()
 		// 輸入完後恢復空值
 		text.value = ''
 		amount.value = ''
@@ -96,7 +97,13 @@ function removeTransaction(id){ //記得帶 id 參數，不然會 fail
 //邏輯??
 	transactions = transactions.filter(transaction  => transaction.id !== id)
 
+	updateLocalStorage()
 	init()
+}
+
+// update local storage transaction
+function updateLocalStorage() {
+	localStorage.setItem('transactions', JSON.stringify(transactions))
 }
 
 // 初始化
