@@ -3,7 +3,6 @@ function 	caclulate(){
 	// 用 jquery 的方式命名變數
 	let currencyOne = $('#currencyOne').val()
 	let currencyTwo = $('#currencyTwo').val()
-	let rate = $('#rate').val()
 
 	// 用 ajax 打 api
 	$.ajax({
@@ -12,7 +11,7 @@ function 	caclulate(){
 	})
 	// 後端 respose 資料，將資料用 res 命名
 		.done(function(res){
-			// 可用 console.log(res) 查看 response api  
+			//  console.log(res) //查看 response api  
 			// 將後端的資料塞到 rate 裡面，[currencyTwo] 是抓取物件 keyValue
 			let rate = res.rates[currencyTwo]
 			// 用 console.log(rate) 查看是否有抓到 keyValue
@@ -25,13 +24,6 @@ function 	caclulate(){
 		})
 }
 
-// 按下 swap dom 會將匯率對調
-$('#swap').click(function(){
-	let temp = $('#currencyOne').val()
-	$('#currencyOne').val($('#currencyTwo').val())
-	$('#currencyTwo').val(temp)
-	caclulate()
-})
 
 // 將 dom 切割成小事件
 // 監聽 currencyOne 選取值
@@ -49,8 +41,11 @@ $( '#currencyTwo').change(function(){
 	caclulate()
 })
 
-// 監聽 amountTwo 選取值
-$( '#amountTwo').change(function(){
+// 按下 swap dom 會將匯率對調
+$('#swap').click(function(){
+	let temp = $('#currencyOne').val()
+	$('#currencyOne').val($('#currencyTwo').val())
+	$('#currencyTwo').val(temp)
 	caclulate()
 })
 
