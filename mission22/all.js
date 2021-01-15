@@ -5,10 +5,16 @@ const total = document.querySelector('#total')
 const movieSelect = document.querySelector('#movie')
 let ticketPrice = +movieSelect.value
 
+// 透過 localStorage 抓取電影索引值跟價格
+function setMovieData(movieIndex, moviePrice) {
+	localStorage.setItem('selectedMovieIndex', movieIndex)
+	localStorage.setItem('selectedMoviePrice', moviePrice)
+}
+
 // 計算選擇的座位數量價格
 function updateSelectCount(){
 	// 將所選取到的座位塞入 selectedSeats 這個變數中
-	const selectedSeats = document.querySelector('.row .seat.selected')
+	const selectedSeats = document.querySelectorAll('.row .seat.selected')
 
 	const selectedSeatCount = selectedSeats.length
 	count.innerText = selectedSeatCount// 將選到的座位數量塞到 count 裡面
@@ -32,7 +38,24 @@ movieSelect.addEventListener('change', e=>{
 	updateSelectCount()//執行
 })
 
+// 紀錄資料，刷新後記錄仍然在
+function populateUI(){
+	// 因為剛才是轉成字串，這裡要轉成物件
+	const selectedSeats = JSON.parse(localStorage.getItem('selectedSeats'))
+	if (selectedSeats !== null && selectedSeats.length>0) {
+		seats.forEach((seat, index)=>{
+			if(selectedSeats.indexOf(index)>-1){
+				seat.classList.add('selected')
+			}
+		})
+	}
 
+	const selectedMovieIndex = localStorage.getItem('selectedMovieIndex')
+	if(selectedMovieIndex !== null){
+		movieSelect.selectedIndex = selectedMovieIndex
+	}
+}
+populateUI()
 
 // 監聽容器內座位數值的變化
 container.addEventListener('click', e=>{
