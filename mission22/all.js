@@ -19,6 +19,21 @@ function updateSelectCount(){
 	localStorage.setItem('selectedSeats', JSON.stringify(seatsIndex))
 }
 
+
+// 依照選擇的電影變更價格
+movieSelect.addEventListener('change', e=>{
+	ticketPrice = +e.target.value
+
+	// 查看我們選擇的電影索引跟價格
+	// console.log(e.target.selectedIndex, e.target.value) 
+
+	// 將電影索引跟價格的參數塞到 setMovieData 裡面
+	setMovieData(e.target.selectedIndex, e.target.value)
+	updateSelectCount()//執行
+})
+
+
+
 // 監聽容器內座位數值的變化
 container.addEventListener('click', e=>{
 	// contains 會返回一個 boolean 值
