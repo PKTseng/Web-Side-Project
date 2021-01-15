@@ -31,6 +31,31 @@ movieSelect.addEventListener('change', e=>{
 	updateSelectCount()//執行
 })
 
+// 透過 localStorage 抓取電影索引值跟價格
+function setMovieData(movieIndex, moviePrice) {
+	localStorage.setItem('selectedMovieIndex', movieIndex)
+	localStorage.setItem('selectedMoviePrice', moviePrice)
+}
+
+// 紀錄資料，刷新後記錄仍然在
+function populateUI(){
+	// 因為剛才是轉成字串，這裡要轉成物件
+	const selectedSeats = JSON.parse(localStorage.getItem('selectedSeats'))
+	if (selectedSeats !== null && selectedSeats.length>0) {
+		seats.forEach((seat, index)=>{
+			if(selectedSeats.indexOf(index)>-1){
+				seat.classList.add('selected')
+			}
+		})
+	}
+
+	const selectedMovieIndex = localStorage.getItem('selectedMovieIndex')
+	if(selectedMovieIndex !== null){
+		movieSelect.selectedIndex = selectedMovieIndex
+	}
+}
+populateUI()
+
 
 // 監聽容器內座位數值的變化
 container.addEventListener('click', e=>{
