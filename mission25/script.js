@@ -17,5 +17,5 @@ loadSong(songs[songsIndex])
 function loadSong(song) {
 	title.innerText = song
 	audio.src= `music/${song}.mp3` 
-	cover.src= `image/${song}.jpg` 
+	cover.src= `images/${song}.jpg` 
 }
