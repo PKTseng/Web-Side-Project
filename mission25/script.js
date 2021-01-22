@@ -43,15 +43,19 @@ function preSong() {
     songsIndex = songs.length - 1;
   }
 
+  loadSong(songs[songsIndex]);
+
   playSong();
 }
 
 function nextSong() {
   songsIndex++;
 
-  if (songIndex > songs.length - 1) {
-    songIndex = 0;
+  if (songsIndex > songs.length - 1) {
+    songsIndex = 0;
   }
+
+  loadSong(songs[songsIndex]);
 
   playSong();
 }
@@ -86,3 +90,5 @@ nextBtn.addEventListener("click", nextSong);
 audio.addEventListener("timeupdate", updateProgress);
 
 progressContainer.addEventListener("click", setProgress);
+
+audio.addEventListener("ended", nextSong);
