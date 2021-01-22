@@ -62,13 +62,13 @@ function updateProgress(e) {
   progress.style.width = `${progressPercent}%`;
 }
 
-// function setProgress(e) {
-// 	const width = this.clientWidth
-// 	const clickX = e.offsetX
-// 	const duration = audio.duration
+function setProgress(e) {
+  const width = this.clientWidth;
+  const clickX = e.offsetX;
+  const duration = audio.duration;
 
-// 	audio.currentTime = (clickX / width) * duration
-// }
+  audio.currentTime = (clickX / width) * duration;
+}
 
 playBtn.addEventListener("click", () => {
   const isPlaying = musicContainer.classList.contains("play");
@@ -85,4 +85,4 @@ nextBtn.addEventListener("click", nextSong);
 
 audio.addEventListener("timeupdate", updateProgress);
 
-// progressContainer.addEventListener("click", setProgress);
+progressContainer.addEventListener("click", setProgress);
