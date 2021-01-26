@@ -7,4 +7,5 @@
 |2 |movie-seat-booking|[Demo](https://pktseng.github.io/Web-Side-Project/mission22/index.html)|
 |3 |Fetch rates|[Demo](https://pktseng.github.io/Web-Side-Project/mission23/index.html)|
 |4 |expense-tracker|[Demo](https://pktseng.github.io/Web-Side-Project/mission24/index.html)|
-|4 |Music Player|[Demo](https://pktseng.github.io/Web-Side-Project/mission25/index.html)|
+|5 |Music Player|[Demo](https://pktseng.github.io/Web-Side-Project/mission25/index.html)|
+|6 |Music Player|[Demo](https://pktseng.github.io/Web-Side-Project/mission26/index.html)|
