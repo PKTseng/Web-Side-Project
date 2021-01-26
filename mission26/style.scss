@@ -75,11 +75,11 @@ h1 {
   position: fixed;
   bottom: 50px;
   transition: opacity 0.3s ease-in;
-  .show {
+  &.show {
     opacity: 1;
   }
   .circle {
-    background: #fff;
+    background-color: #fff;
     width: 10px;
     height: 10px;
     border-radius: 50%;

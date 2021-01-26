@@ -96,12 +96,12 @@ h1 {
   transition: opacity 0.3s ease-in;
 }
 
-.loader .show {
+.loader.show {
   opacity: 1;
 }
 
 .loader .circle {
-  background: #fff;
+  background-color: #fff;
   width: 10px;
   height: 10px;
   border-radius: 50%;
