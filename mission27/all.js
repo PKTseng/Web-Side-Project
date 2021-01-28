@@ -11,6 +11,15 @@ const difficultySelect = document.getElementById("difficulty");
 let randomWord = 0;
 let score = 0;
 let time = 5;
+let difficulty =
+  localStorage.getItem("difficulty") !== null
+    ? localStorage.getItem("difficulty")
+    : "medium";
+
+difficultySelect.value =
+  localStorage.getItem("difficulty") !== null
+    ? localStorage.getItem("difficulty")
+    : "medium";
 
 const words = [
   "sigh",
@@ -34,7 +43,6 @@ const words = [
   "drag",
   "loving",
 ];
-
 text.focus();
 
 const initTime = setInterval(updateTime, 1000);
@@ -83,4 +91,15 @@ text.addEventListener("input", (e) => {
     time += 5;
     updateTime();
   }
+});
+
+// 隱藏或是顯示難度
+settingsBtn.addEventListener("click", () => {
+  settings.classList.toggle("hide");
+});
+
+// 選擇難度，把資料寫進瀏覽器記憶體裡面
+settingsForm.addEventListener("change", (e) => {
+  difficulty = e.target.value;
+  localStorage.setItem("difficulty", difficulty);
 });
