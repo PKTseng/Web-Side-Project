@@ -10,7 +10,7 @@ const difficultySelect = document.getElementById("difficulty");
 
 let randomWord = 0;
 let score = 0;
-let time = 10;
+let time = 5;
 
 const words = [
   "sigh",
@@ -34,6 +34,24 @@ const words = [
   "drag",
   "loving",
 ];
+
+text.focus();
+
+const initTime = setInterval(updateTime, 1000);
+
+function updateTime() {
+  time--;
+  timeEl.innerHTML = time + " s ";
+  if (time === 0) {
+    clearInterval(initTime); //少了這個停損點倒數的數字會變成負的
+    endgameEl.innerHTML = `
+    <h1>Time ran out</h1>
+    <p>Your final score is ${score}</p>
+    <button onclick="location.reload()">Reload</button>
+    `;
+    endgameEl.style.display = "flex";
+  }
+}
 
 // 抓取陣列內的值
 function getRandomWord() {
@@ -61,5 +79,8 @@ text.addEventListener("input", (e) => {
     showRandomWord();
     updateScore();
     e.target.value = ""; //只能用 e.target.value 來清空值
+
+    time += 5;
+    updateTime();
   }
 });
