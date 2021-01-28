@@ -12,7 +12,7 @@ let randomWord = 0;
 let score = 0;
 let time = 10;
 
-// 把選到的值賦予到 difficulty 變數裡面，用來判斷難度的時間
+// 把選到的值賦予到 difficulty 變數裡面，用來判斷難增加的時間
 let difficulty =
   localStorage.getItem("difficulty") !== null
     ? localStorage.getItem("difficulty")
@@ -93,6 +93,7 @@ text.addEventListener("input", (e) => {
 
     time += 5;
 
+    // 依照難度調整增加輸入時間
     if (difficulty === "hard") {
       time += 2;
     } else if (difficulty === "medium") {
