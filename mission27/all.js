@@ -54,3 +54,16 @@ function showRandomWord() {
 
 showRandomWord();
 // console.log(getRandomWord());
+function updateScore() {
+  score++;
+  scoreEl.innerHTML = score;
+}
+
+text.addEventListener("input", (e) => {
+  let inputText = e.target.value;
+  if (inputText === showWord) {
+    showRandomWord();
+    updateScore();
+    e.target.value = ""; //只能用 e.target.value 來清空值
+  }
+});
