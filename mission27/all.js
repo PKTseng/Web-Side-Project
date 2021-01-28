@@ -10,12 +10,15 @@ const difficultySelect = document.getElementById("difficulty");
 
 let randomWord = 0;
 let score = 0;
-let time = 5;
+let time = 10;
+
+// 把選到的值賦予到 difficulty 變數裡面，用來判斷難度的時間
 let difficulty =
   localStorage.getItem("difficulty") !== null
     ? localStorage.getItem("difficulty")
     : "medium";
 
+// 這是選完後抓取選單的值，確保頁面刷新後不會恢復成預設值
 difficultySelect.value =
   localStorage.getItem("difficulty") !== null
     ? localStorage.getItem("difficulty")
@@ -89,6 +92,14 @@ text.addEventListener("input", (e) => {
     e.target.value = ""; //只能用 e.target.value 來清空值
 
     time += 5;
+
+    if (difficulty === "hard") {
+      time += 2;
+    } else if (difficulty === "medium") {
+      time += 3;
+    } else {
+      time += 5;
+    }
     updateTime();
   }
 });
