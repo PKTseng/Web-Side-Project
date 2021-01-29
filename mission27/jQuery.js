@@ -1,11 +1,9 @@
 // 功能需求:
-// 2. 進入頁面後時間開始倒數，若輸入正確倒數時間會增加
-// 3. 時間內沒寫完會顯示時間到的訊息
 // 4. 難度選單可以選擇隱藏或是顯示
 // 5. 刷新頁面後難度不會被回復預設值
 // 6. 依照難度設定相對應的時間
-const text = document.querySelector("#text");
-text.focus();
+
+$("#text").focus();
 
 let time = 10;
 const initTime = setInterval(updateTime, 1000);
@@ -54,4 +52,10 @@ $("#text").on("input", function (e) {
     score++;
     $("#score").text(score);
   }
+});
+
+$("#difficulty").change(function () {
+  difficulty = $("#difficulty").val();
+  console.log(difficulty);
+  localStorage.setItem("difficulty", difficulty);
 });
