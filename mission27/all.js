@@ -14,7 +14,7 @@ text.focus();
 // 設定固定時間，重複循環
 const initTime = setInterval(updateTime, 1000);
 
-let time = 30; //設定初始秒數
+let time = 10; //設定初始秒數
 
 // 執行倒數
 function updateTime() {
@@ -36,9 +36,9 @@ function getRandomWord() {
   axios
     .get("https://random-word-api.herokuapp.com/word?number=1")
     .then((res) => {
-      console.log(res);
+      // console.log(res);
       randomWord = res.data[0];
-      console.log(randomWord);
+      // console.log(randomWord);
       word.innerHTML = randomWord;
     })
     .catch((error) => {
@@ -84,7 +84,7 @@ text.addEventListener("input", (e) => {
     } else {
       time += 5;
     }
-    updateTime();
+    // updateTime();
   }
 });
 
