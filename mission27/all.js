@@ -8,48 +8,15 @@ const settings = document.getElementById("settings");
 const settingsForm = document.getElementById("settings-form");
 const difficultySelect = document.getElementById("difficulty");
 
-let randomWord = 0;
-let score = 0;
-let time = 10;
-
-// 把選到的值賦予到 difficulty 變數裡面，用來判斷難增加的時間
-let difficulty =
-  localStorage.getItem("difficulty") !== null
-    ? localStorage.getItem("difficulty")
-    : "medium";
-
-// 這是選完後抓取選單的值，確保頁面刷新後不會恢復成預設值
-difficultySelect.value =
-  localStorage.getItem("difficulty") !== null
-    ? localStorage.getItem("difficulty")
-    : "medium";
-
-const words = [
-  "sigh",
-  "tense",
-  "airplane",
-  "ball",
-  "pies",
-  "juice",
-  "warlike",
-  "bad",
-  "north",
-  "dependent",
-  "steer",
-  "silver",
-  "highfalutin",
-  "superficial",
-  "quince",
-  "eight",
-  "feeble",
-  "admit",
-  "drag",
-  "loving",
-];
+// 進入頁面可以直接輸入單字
 text.focus();
 
+// 設定固定時間，重複循環
 const initTime = setInterval(updateTime, 1000);
 
+let time = 30; //設定初始秒數
+
+// 執行倒數
 function updateTime() {
   time--;
   timeEl.innerHTML = time + " s ";
@@ -64,30 +31,48 @@ function updateTime() {
   }
 }
 
-// 抓取陣列內的值
+// 用 Axios 打 API 抓取 response 的值
+// let randomWord;
 function getRandomWord() {
-  return words[Math.floor(Math.random() * words.length)];
+  axios
+    .get("https://random-word-api.herokuapp.com/word?number=1")
+    .then((res) => {
+      // console.log(res);
+      randomWord = res.data[0];
+      // console.log(randomWord);
+      word.innerHTML = randomWord;
+    })
+    .catch((error) => {
+      console.log("沒抓到單字資料");
+    });
+  // return words[Math.floor(Math.random() * words.length)];
 }
-
-// 把值綁定到 DOM 上
-function showRandomWord() {
-  showWord = getRandomWord();
-  word.innerHTML = showWord;
-}
-
-showRandomWord(); // 執行
+getRandomWord();
 
 // 答對加分，同時把分數綁到 DOM 上
+let score = 0;
 function updateScore() {
   score++;
   scoreEl.innerHTML = score;
 }
 
+// 把選到的值賦予到 difficulty 變數裡面，用來判斷難增加的時間
+let difficulty =
+  localStorage.getItem("difficulty") !== null
+    ? localStorage.getItem("difficulty")
+    : "medium";
+
+// 這是選完後抓取選單的值，確保頁面刷新後不會恢復成預設值
+difficultySelect.value =
+  localStorage.getItem("difficulty") !== null
+    ? localStorage.getItem("difficulty")
+    : "medium";
+
 // 在輸入框輸入文字同時跟顯示的文字做對比
 text.addEventListener("input", (e) => {
   let inputText = e.target.value;
-  if (inputText === showWord) {
-    showRandomWord();
+  if (inputText === randomWord) {
+    getRandomWord();
     updateScore();
     e.target.value = ""; //只能用 e.target.value 來清空值
 
