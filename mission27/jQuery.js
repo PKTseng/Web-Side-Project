@@ -67,3 +67,7 @@ $("#difficulty").val(
     ? localStorage.getItem("difficulty")
     : "medium"
 );
+
+$("#settings-btn").on("click", () => {
+  $("#settings").toggleClass("hide");
+});
