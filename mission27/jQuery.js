@@ -23,3 +23,17 @@ function randomUser() {
   $("#time").val(time);
 }
 randomUser();
+
+// 辨識輸入的值有沒有跟顯示的值一樣，有得一分
+let score = 0;
+$("#text").on("input", function (e) {
+  const textInput = $(this).val();
+  // console.log(textInput);
+  if (textInput === data) {
+    randomUser();
+    countTime();
+    $("#text").val("");
+    score++;
+    $("#score").text(score);
+  }
+});
