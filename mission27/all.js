@@ -32,14 +32,13 @@ function updateTime() {
 }
 
 // 用 Axios 打 API 抓取 response 的值
-// let randomWord;
 function getRandomWord() {
   axios
     .get("https://random-word-api.herokuapp.com/word?number=1")
     .then((res) => {
-      // console.log(res);
+      console.log(res);
       randomWord = res.data[0];
-      // console.log(randomWord);
+      console.log(randomWord);
       word.innerHTML = randomWord;
     })
     .catch((error) => {
