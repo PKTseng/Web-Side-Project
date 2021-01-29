@@ -1,11 +1,6 @@
-// 功能需求:
-// 4. 難度選單可以選擇隱藏或是顯示
-// 5. 刷新頁面後難度不會被回復預設值
-// 6. 依照難度設定相對應的時間
-
 $("#text").focus();
 
-let time = 10;
+let time = 20;
 const initTime = setInterval(updateTime, 1000);
 
 function updateTime() {
@@ -24,13 +19,12 @@ function updateTime() {
 
 function randomUser() {
   $.ajax({
-    url: "https://randomuser.me/api/",
+    url: "https://random-word-api.herokuapp.com/word?number=1",
     method: "get",
     dataType: "json",
     success: function (res) {
       // console.log(res);
-      // console.log(res.results[0].name.title);
-      data = res.results[0].name.last;
+      data = res[0];
       // console.log(data);
       $("#word").text(data);
     },
@@ -47,10 +41,17 @@ $("#text").on("input", function (e) {
   // console.log(textInput);
   if (textInput === data) {
     randomUser();
-    countTime();
+    updateTime();
     $("#text").val("");
     score++;
     $("#score").text(score);
+    if (difficulty === "hard") {
+      time += 10;
+    } else if (difficulty === "medium") {
+      time += 15;
+    } else {
+      time += 20;
+    }
   }
 });
 
@@ -58,4 +59,11 @@ $("#difficulty").change(function () {
   difficulty = $("#difficulty").val();
   console.log(difficulty);
   localStorage.setItem("difficulty", difficulty);
+  location.reload();
 });
+
+$("#difficulty").val(
+  localStorage.getItem("difficulty") !== null
+    ? localStorage.getItem("difficulty")
+    : "medium"
+);
