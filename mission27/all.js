@@ -44,7 +44,6 @@ function getRandomWord() {
     .catch((error) => {
       console.log("沒抓到單字資料");
     });
-  // return words[Math.floor(Math.random() * words.length)];
 }
 getRandomWord();
 
