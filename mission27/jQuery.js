@@ -4,6 +4,25 @@
 // 4. 難度選單可以選擇隱藏或是顯示
 // 5. 刷新頁面後難度不會被回復預設值
 // 6. 依照難度設定相對應的時間
+const text = document.querySelector("#text");
+text.focus();
+
+let time = 10;
+const initTime = setInterval(updateTime, 1000);
+
+function updateTime() {
+  time--;
+  $("#time").text(time + " s ");
+  if (time === 0) {
+    clearInterval(initTime);
+    $("#end-game-container").html(`
+    <h1>Time ran out</h1>
+    <p>Your final score is ${score}</p>
+    <button onclick="location.reload()">Reload</button>
+    `);
+    $("#end-game-container").css("display", "flex");
+  }
+}
 
 function randomUser() {
   $.ajax({
@@ -19,7 +38,6 @@ function randomUser() {
     },
   });
   time--;
-  console.log(time);
   $("#time").val(time);
 }
 randomUser();
