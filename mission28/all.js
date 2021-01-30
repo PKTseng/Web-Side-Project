@@ -8,3 +8,12 @@ function getRandomNumber() {
 
 // 確認有抓到
 // console.log(randomNumber)
+
+window.SpeechRecognition =
+  window.SpeechRecognition || window.webkitSpeechRecognition
+
+let recognition = new window.SpeechRecognition()
+
+recognition.addEventListener('result', (e) => {
+  console.log(e)
+})
