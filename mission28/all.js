@@ -1,4 +1,4 @@
-const msg = document.querySelector('#msg')
+const msgEl = document.querySelector('#msg')
 const randomNumber = getRandomNumber()
 
 // 取 1~100 內隨機數字
@@ -14,6 +14,16 @@ window.SpeechRecognition =
 
 let recognition = new window.SpeechRecognition()
 
+recognition.start()
 recognition.addEventListener('result', (e) => {
-  console.log(e)
+  // 語音測試一下
+  // console.log(e)
+
+  const msg = e.results[0][0].transcript
+
+  // 把數字寫進 DOM 裡面
+  msgEl.innerHTML = `
+  <div>You said:</div>
+  <span class="box">${msg}</span>
+  `
 })
