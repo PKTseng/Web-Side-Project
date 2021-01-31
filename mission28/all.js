@@ -27,3 +27,5 @@ recognition.addEventListener('result', (e) => {
   <span class="box">${msg}</span>
   `
 })
+
+recognition.addEventListener('end', () => recognition.start())
