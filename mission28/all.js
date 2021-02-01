@@ -14,6 +14,13 @@ window.SpeechRecognition =
 
 let recognition = new window.SpeechRecognition()
 
+function onSpeak(e) {
+  const msg = e.results[0][0].transcript
+
+  writeMsg(msg)
+  checkMsg(msg)
+}
+
 function checkMsg(msg) {
   // 主換數字型別
   const num = +msg
@@ -30,7 +37,7 @@ function checkMsg(msg) {
 
   // 開始猜測，決定數字要喊高還是喊低
   if (num === randomNumber) {
-    msgEl.innerHTML = `
+    document.body.innerHTML = `
       <h2>恭喜猜中! <br><br>
       就是 ${num}</h2>
       <button class="play-again" id="play-again">再玩一次</button>
@@ -42,20 +49,15 @@ function checkMsg(msg) {
   }
 }
 
-recognition.start()
-recognition.addEventListener('result', (e) => {
-  // 語音測試一下
-  // console.log(e)
-
-  const msg = e.results[0][0].transcript
-
-  // 把數字寫進 DOM 裡面
+function writeMsg(msg) {
   msgEl.innerHTML = `
-  <div>You said:</div>
-  <span class="box">${msg}</span>
+    <div>You said: </div>
+    <span class="box">${msg}</span>
   `
-  checkMsg(msg)
-})
+}
+
+recognition.start()
+recognition.addEventListener('result', onSpeak)
 
 // 遊戲結束時就會觸發
 recognition.addEventListener('end', () => recognition.start())
