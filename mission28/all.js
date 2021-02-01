@@ -57,4 +57,11 @@ recognition.addEventListener('result', (e) => {
   checkMsg(msg)
 })
 
+// 遊戲結束時就會觸發
 recognition.addEventListener('end', () => recognition.start())
+
+document.body.addEventListener('click', (e) => {
+  if (e.target.id === 'play-again') {
+    window.location.reload()
+  }
+})
