@@ -27,12 +27,12 @@ function checkMsg(msg) {
 
   // 判斷說的是不是數字
   if (Number.isNaN(num)) {
-    msgEl.innerHTML = `<div>請說數字 !</div>`
+    msgEl.innerHTML += `<div>請說數字 !</div>`
   }
 
   // 判斷數字區間
   if (num > 100 || num < 1) {
-    msgEl.innerHTML = `<div>數字只能介於 1~100 之間</div>`
+    msgEl.innerHTML += `<div>數字只能介於 1~100 之間</div>`
   }
 
   // 開始猜測，決定數字要喊高還是喊低
@@ -43,9 +43,9 @@ function checkMsg(msg) {
       <button class="play-again" id="play-again">再玩一次</button>
       `
   } else if (num > randomNumber) {
-    msgEl.innerHTML = `<div>再低</div>`
+    msgEl.innerHTML += `<div>再低</div>`
   } else {
-    msgEl.innerHTML = `<div>再高</div>`
+    msgEl.innerHTML += `<div>再高</div>`
   }
 }
 
