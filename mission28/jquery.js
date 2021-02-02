@@ -1,4 +1,4 @@
-const msgEl = document.querySelector('#msg')
+// const $('#msg') = document.querySelector('#msg')
 const randomNumber = getRandomNumber()
 
 // 取 1~100 內隨機數字
@@ -27,33 +27,30 @@ function checkMsg(msg) {
 
   // 判斷說的是不是數字
   if (Number.isNaN(num)) {
-    msgEl.innerHTML += `<div>請說數字 !</div>`
+    $('#msg').html(`<div>請說數字 !</div>`)
   }
 
   // 判斷數字區間
   if (num > 100 || num < 1) {
-    msgEl.innerHTML += `<div>數字只能介於 1~100 之間</div>`
+    $('#msg').append(`<div>數字只能介於 1~100 之間</div>`)
   }
 
   // 開始猜測，決定數字要喊高還是喊低
   if (num === randomNumber) {
-    document.body.innerHTML = `
-      <h2>恭喜猜中! <br><br>
+    $('body').html(`
+      <h2>恭喜猜中! <br>
       就是 ${num}</h2>
       <button class="play-again" id="play-again">再玩一次</button>
-      `
+      `)
   } else if (num > randomNumber) {
-    msgEl.innerHTML += `<div>再低</div>`
+    $('#msg').append(`<div>再低</div>`)
   } else {
-    msgEl.innerHTML += `<div>再高</div>`
+    $('#msg').append(`<div>再高</div>`)
   }
 }
 
 function writeMsg(msg) {
-  msgEl.innerHTML = `
-    <div>You said: </div>
-    <span class="box">${msg}</span>
-  `
+  $('#msg').html(`<div>You said: </div><span class="box">${msg}</span>`)
 }
 
 recognition.start()
@@ -62,7 +59,7 @@ recognition.addEventListener('result', onSpeak)
 // 遊戲結束時就會觸發
 recognition.addEventListener('end', () => recognition.start())
 
-document.body.addEventListener('click', (e) => {
+$('body').click(function (e) {
   if (e.target.id === 'play-again') {
     window.location.reload()
   }
