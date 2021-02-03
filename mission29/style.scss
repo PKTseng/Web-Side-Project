@@ -30,7 +30,8 @@ body {
     justify-content: center;
     align-items: center;
     p {
-      font-size: 30px;
+      font-size: 40px;
+      padding: 20px;
     }
     .times {
       margin: 15px;
@@ -46,6 +47,7 @@ body {
     .countdown {
       p {
         font-size: 20px;
+        padding: 10px;
       }
       small {
         font-size: 10px;
