@@ -30,6 +30,8 @@ body {
 .container {
   font-weight: 600;
   color: #fff;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 .container h1 {
