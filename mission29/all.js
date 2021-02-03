@@ -1,4 +1,4 @@
-const dayEl = document.querySelector('#day')
+const dayEl = document.querySelector('#days')
 const hourEl = document.querySelector('#hours')
 const minutesEL = document.querySelector('#minutes')
 const secondsEl = document.querySelector('#seconds')
@@ -31,6 +31,9 @@ function getTime() {
   // console.log(seconds)
 
   dayEl.innerHTML = day
-  // hourEl.innerHTML = hours < 10 ? '0' + hours : hours
+  hourEl.innerHTML = hours < 10 ? '0' + hours : hours
+  minutesEL.innerHTML = minutes < 10 ? '0' + minutes : minutes
+  secondsEl.innerHTML = seconds < 10 ? '0' + seconds : seconds
 }
-getTime()
+// getTime()
+setInterval(getTime, 1000)
