@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  <title>表單驗證</title>
+</head>
+<body>
+  <div class="container">
+    <!-- 輸入使用者名稱 -->
+    <form class='form' id='form'>
+      <h1>表單驗證</h1>
+      <div class="formControl">
+        <label for="username">UserName:</label>
+        <input type="text" id="username" placeholder="Key in UserName">
+        <small class='failMessage'>Error message</small>
+      </div>
+      <!-- 輸入使用者e-mail -->
+      <div class="formControl">
+        <label for="email">E-mail:</label>
+        <input type="text" id="email" placeholder="Key in E-mail">
+        <small class='failMessage'>Error message</small>
+      </div>
+      <!-- 輸入使用者密碼 -->
+      <div class="formControl">
+        <label for="password">Password:</label>
+        <input type="password" id="password" placeholder="Key in password">
+        <small class='failMessage'>密碼錯誤</small>
+      </div>
+      <!-- 確認使用者密碼 -->
+      <div class="formControl">
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" id="confirmPassword" placeholder="Key in password again">
+        <small class='failMessage'>請重新輸入密碼</small>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+  <script src="./all.js"></script>
+</body>
+</html>
