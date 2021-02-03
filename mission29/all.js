@@ -2,6 +2,8 @@ const dayEl = document.querySelector('#days')
 const hourEl = document.querySelector('#hours')
 const minutesEL = document.querySelector('#minutes')
 const secondsEl = document.querySelector('#seconds')
+const countdown = document.querySelector('#countdown')
+const loading = document.querySelector('#loading')
 // const times1 = new Date()
 // console.log(times1)
 // console.log(typeof times1)
@@ -37,3 +39,8 @@ function getTime() {
 }
 // getTime()
 setInterval(getTime, 1000)
+
+setTimeout(() => {
+  loading.remove()
+  countdown.style.display = 'flex'
+}, 1000)
