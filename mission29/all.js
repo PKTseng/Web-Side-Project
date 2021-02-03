@@ -14,3 +14,23 @@ const nowYear = new Date().getFullYear()
 
 const newYear = new Date(`January 01 ${nowYear + 1} 00:00:00`)
 // console.log(newYearTime)
+
+function getTime() {
+  const newTime = new Date()
+  // console.log(newTime)
+  const totalTime = newYear - newTime
+  // console.log(totalTime)
+
+  const day = Math.floor(totalTime / 1000 / 60 / 60 / 24)
+  // console.log(day)
+  const hours = Math.floor(totalTime / 1000 / 60 / 60) % 24
+  // console.log(hours)
+  const minutes = Math.floor(totalTime / 1000 / 60) % 60
+  // console.log(minutes)
+  const seconds = Math.floor(totalTime / 1000) % 60
+  // console.log(seconds)
+
+  dayEl.innerHTML = day
+  // hourEl.innerHTML = hours < 10 ? '0' + hours : hours
+}
+getTime()
