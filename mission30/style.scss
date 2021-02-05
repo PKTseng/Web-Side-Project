@@ -85,7 +85,7 @@ ul {
 /* Custom Scrollbar */
 .custom-scroll {
   overflow-y: auto;
-  max-height: 75vh;
+  max-height: 45vh; //控制項目顯示的大小，不然會整個版面都是
 }
 
 .custom-scroll::-webkit-scrollbar-track {
