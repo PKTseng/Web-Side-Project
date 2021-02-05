@@ -39,7 +39,7 @@ h1 {
           align-items: flex-start;
 }
 
-.drag-container .drag-column {
+.drag-container .drag-list .drag-column {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -134,7 +134,7 @@ ul {
   min-height: 50px;
 }
 
-.drag-item {
+.drag-item-list .drag-item {
   margin: 10px;
   padding: 10px;
   height: -webkit-fit-content;
@@ -147,7 +147,7 @@ ul {
   cursor: pointer;
 }
 
-.drag-item:focus {
+.drag-item-list .drag-item:focus {
   outline: none;
   background-color: white;
   color: black;
@@ -163,7 +163,7 @@ ul {
           justify-content: space-between;
 }
 
-.add-btn {
+.add-btn-group .add-btn {
   margin: 10px;
   padding: 5px 10px;
   display: -webkit-box;
@@ -185,21 +185,21 @@ ul {
           user-select: none;
 }
 
-.add-btn:hover {
+.add-btn-group .add-btn:hover {
   background-color: rgba(255, 255, 255, 0.9);
   color: black;
 }
 
-.add-btn:active {
+.add-btn-group .add-btn:active {
   -webkit-transform: scale(0.97);
           transform: scale(0.97);
 }
 
-.solid {
+.add-btn-group .solid {
   display: none;
 }
 
-.solid:hover {
+.add-btn-group .solid:hover {
   -webkit-transition: unset;
   transition: unset;
   -webkit-filter: brightness(95%);
@@ -223,7 +223,7 @@ ul {
   display: none;
 }
 
-.add-item {
+.add-container .add-item {
   width: 100%;
   min-height: 100px;
   height: auto;
@@ -235,7 +235,7 @@ ul {
   padding: 10px;
 }
 
-.add-item:focus {
+.add-container .add-item:focus {
   outline: none;
 }
 
