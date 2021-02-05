@@ -31,30 +31,29 @@ h1 {
   font-size: 3rem;
 }
 
+.drag-container {
+  margin: 20px;
+  .drag-list {
+    display: flex;
+    align-items: flex-start;
+  }
+  .drag-column {
+    flex: 1; //加這行讓其區塊等距排列
+    margin: 0 10px;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    overflow-x: hidden;
+  }
+}
+
 ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-.drag-container {
-  margin: 20px;
-}
-
-.drag-list {
-  display: flex;
-  align-items: flex-start;
-}
-
 /* Columns */
-.drag-column {
-  margin: 0 10px;
-  position: relative;
-  background-color: rgba(0, 0, 0, 0.4);
-  border-radius: 10px;
-  overflow-x: hidden;
-}
-
 .backlog-column .header,
 .backlog-column .solid,
 .backlog-column .solid:hover,

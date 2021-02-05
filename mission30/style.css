@@ -26,17 +26,11 @@ h1 {
   font-size: 3rem;
 }
 
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
 .drag-container {
   margin: 20px;
 }
 
-.drag-list {
+.drag-container .drag-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -45,8 +39,10 @@ ul {
           align-items: flex-start;
 }
 
-/* Columns */
-.drag-column {
+.drag-container .drag-column {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   margin: 0 10px;
   position: relative;
   background-color: rgba(0, 0, 0, 0.4);
@@ -54,6 +50,13 @@ ul {
   overflow-x: hidden;
 }
 
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Columns */
 .backlog-column .header,
 .backlog-column .solid,
 .backlog-column .solid:hover,
