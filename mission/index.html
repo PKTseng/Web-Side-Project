@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drag and Drop</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1 class="main-title">Todo-List</h1>
+    <div class="drag-container">
+      <!-- 最大的分4個 ，先做出一個，再複製-->
+      <ul class="drag-list">
+        <!-- Backlog 代辦清單 -->
+        <li class="drag-column backlog-column">
+          <!-- Backlog title -->
+          <span class="header">
+            <h1>Backlog</h1>
+          </span>
+          <!-- Backlog Content-->
+          <div id="backlog-content" class="custom-scroll">
+            <ul class="drag-item-list" id="backlog-list">
+              <li class="drag-item">Testing</li>
+              <li class="drag-item">Testing</li>
+              <li class="drag-item">Testing</li>
+            </ul>
+          </div>
+          <!-- 新增項目跟儲存按鈕 -->
+          <div class="add-btn-group">
+            <div class="add-btn">
+              <span class="plus-sign">+</span>
+              <span>Add Item</span>
+            </div>
+            <div class="add-btn solid">
+              <span>Save Item</span>
+            </div>
+            <div class="add-container">
+              <div class="add-item"></div>
+            </div>
+          </div>
+        </li>
+
+        <!-- In Progress 正在進行 -->
+        <li class="drag-column progress-column">
+          <!-- progress title -->
+          <span class="header">
+            <h1>progress</h1>
+          </span>
+          <!-- progress Content-->
+          <div id="progress-content" class="custom-scroll">
+            <ul class="drag-item-list" id="progress-list">
+              <li class="drag-item">Testing</li>
+              <li class="drag-item">Testing</li>
+              <li class="drag-item">Testing</li>
+            </ul>
+          </div>
+          <!-- 新增項目跟儲存按鈕 -->
+          <div class="add-btn-group">
+            <div class="add-btn">
+              <span class="plus-sign">+</span>
+              <span>Add Item</span>
+            </div>
+            <div class="add-btn solid">
+              <span>Save Item</span>
+            </div>
+            <div class="add-container">
+              <div class="add-item"></div>
+            </div>
+          </div>
+        </li>
+
+        <!-- Complete 已完成 -->
+        <li class="drag-column complete-column">
+          <!-- complete title -->
+          <span class="header">
+            <h1>complete</h1>
+          </span>
+          <!-- complete Content-->
+          <div id="complete-content" class="custom-scroll">
+            <ul class="drag-item-list" id="complete-list">
+              <li class="drag-item">Testing</li>
+              <li class="drag-item">Testing</li>
+              <li class="drag-item">Testing</li>
+            </ul>
+          </div>
+          <!-- 新增項目跟儲存按鈕 -->
+          <div class="add-btn-group">
+            <div class="add-btn">
+              <span class="plus-sign">+</span>
+              <span>Add Item</span>
+            </div>
+            <div class="add-btn solid">
+              <span>Save Item</span>
+            </div>
+            <div class="add-container">
+              <div class="add-item"></div>
+            </div>
+          </div>
+        </li>
+
+        <!-- On Hold 卡住的 -->
+        <li class="drag-column on-hold-column">
+          <!-- on-hold title -->
+          <span class="header">
+            <h1>on-hold</h1>
+          </span>
+          <!-- on-hold Content-->
+          <div id="on-hold-content" class="custom-scroll">
+            <ul class="drag-item-list" id="on-hold-list">
+              <li class="drag-item">Testing</li>
+              <li class="drag-item">Testing</li>
+              <li class="drag-item">Testing</li>
+            </ul>
+          </div>
+          <!-- 新增項目跟儲存按鈕 -->
+          <div class="add-btn-group">
+            <div class="add-btn">
+              <span class="plus-sign">+</span>
+              <span>Add Item</span>
+            </div>
+            <div class="add-btn solid">
+              <span>Save Item</span>
+            </div>
+            <div class="add-container">
+              <div class="add-item"></div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <script src="all.js"></script>
+  </body>
+</html>
