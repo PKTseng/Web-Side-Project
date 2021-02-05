@@ -8,7 +8,26 @@
   </head>
   <body>
     <h1 class="main-title">Todo-List</h1>
-    <!-- Script -->
+    <div class="drag-container">
+      <!-- 最大的分4個 ，先做出一個，再複製-->
+      <ul class="drag-list">
+        <!-- 代辦清單 -->
+        <li class="drag-column backlog-column">
+          <!-- Backlog title -->
+          <span class="header">
+            <h1>Backlog</h1>
+          </span>
+          <!-- Backlog Content-->
+          <div id="backlog-content">
+            <ul class="drag-item-list" id="backlog-list">
+              <li class="drag-item">Testing</li>
+              <li class="drag-item">Testing</li>
+              <li class="drag-item">Testing</li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
