@@ -26,7 +26,7 @@ function creatListItem() {
     .map((a) => a.value)
     .forEach((person, index) => {
       const listItem = document.createElement('li')
-      listItem.setAttribute('dragIndex', index)
+      listItem.setAttribute('dragIndex', index) //這不是設定className，單純的 name 跟 value
 
       listItem.innerHTML = `
     <span class='number'>${index + 1}</span>
@@ -38,4 +38,22 @@ function creatListItem() {
       listItems.push(listItem)
       draggableList.append(listItem)
     })
+
+  addEventListener()
+}
+
+function addEventListener() {
+  const draggables = document.querySelectorAll('.draggable')
+  const dragListItems = document.querySelectorAll('.draggable-list li') //選到 ul 底下所有 li
+
+  draggables.forEach((draggables) => {
+    draggables.addEventListener('dragstart', dragStart)
+  })
+
+  dragListItems.forEach((item) => {
+    item.addEventListener('dragover', dragOver)
+    item.addEventListener('drag', dragDrag)
+    item.addEventListener('dragenter', dragEnter)
+    item.addEventListener('dragleave', dragLeave)
+  })
 }
