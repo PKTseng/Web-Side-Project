@@ -14,7 +14,7 @@ const richestPeople = [
   'Larry Page',
 ]
 
-let dragStarIndex
+let dragStartIndex
 const listItems = []
 
 creatListItem()
@@ -36,23 +36,61 @@ function creatListItem() {
     </div>
     `
       listItems.push(listItem)
-      draggableList.append(listItem)
+      draggableList.appendChild(listItem)
     })
 
-  addEventListener()
+  addEventListeners()
 }
 
-function addEventListener() {
+function dragStart() {
+  // console.log('Event: ', 'dragStart')
+  //拖曳的時候抓取索引值
+  dragStartIndex = +this.closest('li').getAttribute('dragIndex') //上面設定索引值，這裡抓索引值，+ 號改型別用
+  // console.log(dragStartIndex)
+  // console.log(typeof dragStartIndex)
+}
+
+function dragEnter() {
+  // console.log('Event: ', 'dragEnter')
+  this.classList.add('over')
+}
+
+function dragLeave() {
+  // console.log('Event: ', 'dragLeave')
+  this.classList.remove('over')
+}
+
+function dragOver(e) {
+  // console.log('Event: ', 'dragOver')
+  e.preventDefault()
+}
+
+function dragDrag() {
+  // console.log('Event: ', 'dragDrag')
+  const dragEndIndex = +this.getAttribute('dragIndex')
+  swapItems(dragStartIndex, dragEndIndex)
+  this.classList.remove('over')
+}
+
+function swapItems(from, to) {
+  const itemOne = listItems[from].querySelector('.draggable')
+  const itemTwo = listItems[to].querySelector('.draggable')
+
+  listItems[from].appendChild(itemTwo)
+  listItems[to].appendChild(itemOne)
+}
+
+function addEventListeners() {
   const draggables = document.querySelectorAll('.draggable')
   const dragListItems = document.querySelectorAll('.draggable-list li') //選到 ul 底下所有 li
 
-  draggables.forEach((draggables) => {
-    draggables.addEventListener('dragstart', dragStart)
+  draggables.forEach((draggable) => {
+    draggable.addEventListener('dragstart', dragStart)
   })
 
   dragListItems.forEach((item) => {
     item.addEventListener('dragover', dragOver)
-    item.addEventListener('drag', dragDrag)
+    item.addEventListener('drop', dragDrag)
     item.addEventListener('dragenter', dragEnter)
     item.addEventListener('dragleave', dragLeave)
   })
