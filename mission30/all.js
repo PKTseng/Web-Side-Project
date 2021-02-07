@@ -72,12 +72,26 @@ function dragDrag() {
   this.classList.remove('over')
 }
 
+// 拖曳時可以替換
 function swapItems(from, to) {
   const itemOne = listItems[from].querySelector('.draggable')
   const itemTwo = listItems[to].querySelector('.draggable')
 
   listItems[from].appendChild(itemTwo)
   listItems[to].appendChild(itemOne)
+}
+
+function checkOrder() {
+  listItems.forEach((listItem, index) => {
+    const personName = listItem.querySelector('.draggable').innerText.trim()
+
+    if (personName !== richestPeople[index]) {
+      listItem.classList.add('wrong')
+    } else {
+      listItem.classList.remove('wrong')
+      listItem.classList.add('right')
+    }
+  })
 }
 
 function addEventListeners() {
@@ -95,3 +109,5 @@ function addEventListeners() {
     item.addEventListener('dragleave', dragLeave)
   })
 }
+
+checkBtn.addEventListener('click', checkOrder)
