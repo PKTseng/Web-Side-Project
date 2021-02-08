@@ -11,7 +11,10 @@
 }
 
 body {
-  background-color: #fff;
+  background-image: url(https://images.unsplash.com/photo-1579656448617-54293b6a10e1?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -39,7 +42,7 @@ body {
 }
 
 .draggable-list .number {
-  background-color: var(--background-color);
+  background-color: #fdcb6e;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -49,7 +52,7 @@ body {
 }
 
 .draggable-list li.over .draggable {
-  background-color: #eaeaea;
+  background-color: #e67e22;
 }
 
 .draggable-list .person-name {
@@ -74,9 +77,10 @@ body {
 }
 
 .check-btn {
-  background-color: var(--background-color);
+  background-color: #0984e3;
   border: none;
-  color: var(--text-color);
+  color: #fff;
+  border-radius: 50px;
   font-size: 16px;
   padding: 10px 20px;
   cursor: pointer;
