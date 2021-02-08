@@ -1,17 +1,17 @@
 const draggableList = document.querySelector('#draggable-list')
 const checkBtn = document.querySelector('#check-btn')
 
-const richestPeople = [
-  'Jeff Bezos',
-  'Bill Gates',
-  'Warren Buffett',
-  'Bernard Arnault',
-  'Carlos Slim Helu',
-  'Amancio Ortega',
-  'Larry Ellison',
-  'Mark Zuckerberg',
-  'Michael Bloomberg',
-  'Larry Page',
+const attractions = [
+  '客家大院',
+  '後龍鎮半天寮休閒文化園區 - 好望角',
+  '天空之城',
+  '九華山 天空步道',
+  '苗栗客家圓樓',
+  '雅聞七里香玫瑰森林',
+  '龍騰斷橋(魚藤坪斷橋)',
+  '飛牛牧場',
+  '銅鑼炮仗花海公園',
+  '舊銅鑼隧道',
 ]
 
 let dragStartIndex
@@ -20,7 +20,7 @@ const listItems = []
 creatListItem()
 
 function creatListItem() {
-  ;[...richestPeople]
+  ;[...attractions]
     .map((a) => ({ value: a, sort: Math.random() }))
     .sort((a, b) => a.sort - b.sort)
     .map((a) => a.value)
@@ -85,7 +85,7 @@ function checkOrder() {
   listItems.forEach((listItem, index) => {
     const personName = listItem.querySelector('.draggable').innerText.trim()
 
-    if (personName !== richestPeople[index]) {
+    if (personName !== attractions[index]) {
       listItem.classList.add('wrong')
     } else {
       listItem.classList.remove('wrong')
