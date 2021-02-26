@@ -28,16 +28,50 @@
         />
       </div>
       <br />
-      <div id="profile"></div>
+      <!-- 用 ES6 字串模板 -->
+      <div id="profile">
+        <!-- <div class="card card-body mb-3">
+          <div class="row">
+            <div class="col-md-3">
+              <img class="img-fluid mb-2" src="${user.avatar_url}" />
+              <a
+                href="${user.html_url}"
+                target="_blank"
+                class="btn btn-primary btn-block mb-4"
+                >View Profile</a
+              >
+            </div>
+            <div class="col-md-9">
+              <span class="badge badge-primary"
+                >Public Repos: ${user.public_repos}</span
+              >
+              <span class="badge badge-secondary"
+                >Public Gists: ${user.public_gists}</span
+              >
+              <span class="badge badge-success"
+                >Followers: ${user.followers}</span
+              >
+              <span class="badge badge-info">Following: ${user.following}</span>
+              <br /><br />
+              <ul class="list-group">
+                <li class="list-group-item">Company: ${user.company}</li>
+                <li class="list-group-item">Website/Blog: ${user.blog}</li>
+                <li class="list-group-item">Location: ${user.location}</li>
+                <li class="list-group-item">
+                  Member Since: ${user.created_at}
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <h3 class="page-heading mb-3">Latest Repos</h3>
+        <div id="repos"></div> -->
+      </div>
     </div>
 
     <footer class="mt-5 p-3 text-center bg-light">GitHub Finder &copy;</footer>
 
-    <script
-      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
       integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
