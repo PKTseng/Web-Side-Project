@@ -1,11 +1,7 @@
-html,
 body {
   position: relative;
   height: 100%;
   box-sizing: border-box;
-}
-
-body {
   background: #000;
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 14px;
@@ -14,6 +10,7 @@ body {
   padding: 0;
 }
 
+// 整個 swiper 設定
 .swiper-container {
   width: 100%;
   height: 300px;
@@ -26,11 +23,13 @@ body {
   }
 }
 
+// swiper 大圖設定
 .gallery-top {
   width: 100%;
   height: 450px;
 }
 
+// swiper 小圖設定
 .gallery-thumbs {
   height: 15vh;
   box-sizing: border-box;
@@ -42,14 +41,39 @@ body {
   opacity: 0.4;
 }
 
+// 顯示當前 swiper 的小圖才會亮，其他暗色
 .gallery-thumbs .swiper-slide-thumb-active {
   opacity: 1;
 }
 
+// 首頁 logo
 .logo {
   height: 70px;
 }
 
+// 類型選單
 .listMenu {
   top: 100px;
+}
+
+// 購物車
+.cart {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  cursor: pointer;
+  .cartText {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    z-index: 1;
+    width: 25px;
+    height: 25px;
+    color: white;
+    background: red;
+    border-radius: 50%;
+    font-weight: 300;
+    font-size: 18px;
+    text-align: center;
+  }
 }

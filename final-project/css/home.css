@@ -1,12 +1,8 @@
-html,
 body {
   position: relative;
   height: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-}
-
-body {
   background: #000;
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 14px;
@@ -55,5 +51,27 @@ body {
 
 .listMenu {
   top: 100px;
+}
+
+.cart {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  cursor: pointer;
+}
+
+.cart .cartText {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  z-index: 1;
+  width: 25px;
+  height: 25px;
+  color: white;
+  background: red;
+  border-radius: 50%;
+  font-weight: 300;
+  font-size: 18px;
+  text-align: center;
 }
 /*# sourceMappingURL=home.css.map */
