@@ -88,12 +88,26 @@ body {
   font-size: 20px;
   font-weight: 600;
 }
+
+// 卡片
 .cardTitle {
   position: relative;
   overflow: hidden;
+  .thumbnail {
+    overflow: hidden;
+    img {
+      transform: scale(1, 1);
+      transition: 0.5s;
+    }
+    img:hover {
+      transform: scale(1.1, 1.1);
+    }
+  }
 }
 
+// 卡片標籤
 .type {
+  z-index: 1;
   font-weight: 700;
   padding: 5px;
   width: 120px;

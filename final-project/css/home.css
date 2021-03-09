@@ -89,7 +89,24 @@ body {
   overflow: hidden;
 }
 
+.cardTitle .thumbnail {
+  overflow: hidden;
+}
+
+.cardTitle .thumbnail img {
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.cardTitle .thumbnail img:hover {
+  -webkit-transform: scale(1.1, 1.1);
+          transform: scale(1.1, 1.1);
+}
+
 .type {
+  z-index: 1;
   font-weight: 700;
   padding: 5px;
   width: 120px;
