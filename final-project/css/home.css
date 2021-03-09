@@ -1,6 +1,5 @@
 body {
   position: relative;
-  height: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   background: #000;
@@ -60,7 +59,7 @@ body {
 .cart {
   position: fixed;
   right: 30px;
-  bottom: 30px;
+  bottom: 60px;
   cursor: pointer;
 }
 
@@ -81,6 +80,7 @@ body {
 
 .footer {
   font-size: 20px;
+  background: #1e1e1e;
 }
 
 .menuText {
