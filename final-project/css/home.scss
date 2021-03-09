@@ -2,8 +2,7 @@ html,
 body {
   position: relative;
   height: 100%;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
@@ -20,12 +19,11 @@ body {
   height: 300px;
   margin-left: auto;
   margin-right: auto;
-}
-
-.swiper-container .swiper-slide {
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
+  .swiper-slide {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
 }
 
 .gallery-top {
@@ -35,8 +33,7 @@ body {
 
 .gallery-thumbs {
   height: 15vh;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   padding: 10px 0;
 }
 
@@ -52,4 +49,3 @@ body {
 .logo {
   height: 70px;
 }
-/*# sourceMappingURL=home.css.map */
