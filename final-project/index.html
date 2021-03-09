@@ -48,11 +48,11 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto align-items-center">
-            <li class="nav-item active">
+            <!-- <li class="nav-item active">
               <a class="nav-link" href="./index.html"
                 ><i class="fas fa-home"></i>首頁
               </a>
-            </li>
+            </li> -->
             <li class="nav-item">
               <a class="nav-link" href="#">
                 <i class="far fa-heart"></i>
@@ -76,7 +76,7 @@
         <!--  banner 第1張 -->
         <div
           class="swiper-slide"
-          style="background-image: url(./images/banner/banner1-2.jpg)"
+          style="background-image: url(./images/banner/banner1.jpg)"
         ></div>
         <!--  banner 第2張 -->
         <div
@@ -192,38 +192,42 @@
             <a
               data-toggle="list"
               href="#home"
-              class="list-group-item list-group-item-action active"
+              class="list-group-item list-group-item-action active list-group-item-dark"
             >
               全部顯示
             </a>
             <a
               data-toggle="list"
               href="#menu-1"
-              class="list-group-item list-group-item-action"
+              class="list-group-item list-group-item-action list-group-item-dark d-flex justify-content-between"
             >
-              <i class="fas fa-film"></i>
-              冒險</a
-            >
+              <i class="fas fa-film">冒險</i>
+
+              <span class="badge badge-light badge-pill">5</span>
+            </a>
             <a
               data-toggle="list"
               href="#menu-2"
-              class="list-group-item list-group-item-action"
-              ><i class="fas fa-film"></i>劇情類</a
-            >
+              class="list-group-item list-group-item-action list-group-item-dark d-flex justify-content-between"
+              ><i class="fas fa-film">劇情類</i>
+              <span class="badge badge-light badge-pill">1</span>
+            </a>
             <a
               data-toggle="list"
               href="#menu-3"
               href="#"
-              class="list-group-item list-group-item-action"
-              ><i class="fas fa-film"></i>動作類</a
-            >
+              class="list-group-item list-group-item-action list-group-item-dark d-flex justify-content-between"
+              ><i class="fas fa-film">動作類</i>
+              <span class="badge badge-light badge-pill">3</span>
+            </a>
             <a
               data-toggle="list"
               href="#menu-4"
               href="#"
-              class="list-group-item list-group-item-action"
-              ><i class="fas fa-film"></i>奇幻</a
-            >
+              class="list-group-item list-group-item-action list-group-item-dark d-flex justify-content-between"
+              ><i class="fas fa-film">奇幻</i>
+              <span class="badge badge-light badge-pill">2</span>
+            </a>
           </div>
         </div>
         <!-- 右邊所有電影清單 -->
@@ -957,13 +961,33 @@
       </div>
     </section>
 
-    <footer class="d-flex justify-content-center align-items-center">
-      <div>
-        <p class="text-white">©Copyright 2021 週末電影院 純屬練習作品</p>
-        <i class="fab fa-instagram text-white"></i>
-      </div>
+    <!-- 最底層 footer -->
+    <footer class="footer py-3 text-muted">
+      <div class="container"></div>
+      <ul class="list-inline d-flex justify-content-center align-items-center">
+        <li class="list-inline-item">
+          © Copyright 2021 週末電影院 純屬練習作品
+        </li>
+        <li class="list-inline-item">
+          <a href="javascript::" class="text-info"
+            ><i class="fab fa-instagram fa-2x"></i
+          ></a>
+        </li>
+        <li class="list-inline-item">
+          <a href="javascript::" class="text-info"
+            ><i class="fab fa-facebook fa-2x"></i
+          ></a>
+        </li>
+      </ul>
     </footer>
 
+    <!-- 購物車 -->
+    <div class="cart">
+      <a href="#">
+        <i class="fas fa-cart-plus fa-4x"></i>
+        <span class="cartText">3</span>
+      </a>
+    </div>
     <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script
