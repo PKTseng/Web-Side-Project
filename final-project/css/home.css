@@ -49,6 +49,10 @@ body {
   height: 70px;
 }
 
+.favorite {
+  font-size: 20px;
+}
+
 .listMenu {
   top: 100px;
 }
