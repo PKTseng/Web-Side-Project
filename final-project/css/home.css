@@ -205,10 +205,6 @@ body {
     display: block;
     z-index: 2;
   }
-  .mobileMenu .btn {
-    background: #f18329;
-    color: #fff;
-  }
 }
 
 .movie {
