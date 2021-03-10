@@ -186,4 +186,15 @@ body {
           transform: rotate(-45deg);
   font-size: 18px;
 }
+
+.movie {
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 500px;
+}
+
+.movie1 {
+  background-image: url("../images/movie1.jpg");
+}
 /*# sourceMappingURL=home.css.map */
