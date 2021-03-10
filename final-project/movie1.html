@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Final Project</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <!-- Link Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.5.0/swiper-bundle.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.5.0/swiper-bundle.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./css/home.css" />
+    <!-- Demo styles -->
+  </head>
+
+  <body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="./index.html">
+          <img src="./images/logo.png" alt="" class="logo" />
+        </a>
+        <div class="collapse navbar-collapse">
+          <ul class="navbar-nav align-items-center mr-auto">
+            <!-- <li class="nav-item active">
+              <a class="nav-link" href="./index.html"
+                ><i class="fas fa-home"></i>首頁
+              </a>
+            </li> -->
+            <li class="nav-item favorite">
+              <a class="nav-link" href="#">
+                <i class="far fa-heart"></i>
+                我的最愛</a
+              >
+            </li>
+          </ul>
+          <!-- 右邊購物車結帳頁面 -->
+          <div class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <i class="fas fa-cart-plus fa-2x text-white"></i>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item">Another action action action</a>
+              <a class="btn btn-outline-secondary btn-block" href="#"
+                ><i class="fas fa-cart-plus"></i>Action</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- 詳細資料 -->
+    <section class="container mt-5">
+      <div class="row text-white">
+        <div class="col-md-5 movie movie1"></div>
+        <div class="col-md-5 d-flex flex-column justify-content-lg-between">
+          <div>
+            <h2>魔物獵人</h2>
+            <h5 class="d-flex align-items-center">
+              類型: <span class="badge badge-success mx-1 p-2">冒險</span>
+            </h5>
+            <p>
+              趙寅成 x 南柱赫 x
+              雪炫史詩悲壯主演，耗資215億韓元大製作，重現韓國歷史中最激烈的戰役！戰無不克的唐太宗，望擴大東亞領土，征戰高句麗，兵臨其邊境的安市城。20萬唐朝精銳大軍，對上僅5千人的安市城軍民，相差40倍之遙。城主楊萬春將軍，無畏大軍壓境，堅守城池，號召百姓們一同作戰，88天裡，與唐軍展開一場殊死決戰。
+            </p>
+          </div>
+          <!-- 價格 -->
+          <div>
+            <div class="d-flex flex-column align-items-end">
+              <del class="text-white"><h5>售價 NT$500</h5></del>
+              <div class="h3 m-0 ml-auto text-danger">
+                <span>特價 NT$</span>
+                <strong>300</strong>
+              </div>
+            </div>
+            <div
+              class="d-flex justify-content-end align-items-end mt-3 btn-group"
+            >
+              <button class="btn btn-outline-light">
+                <i class="far fa-heart"></i>
+                <span class="px-1">加到我的最愛</span>
+              </button>
+              <button class="btn btn-outline-light">
+                <i class="fas fa-cart-arrow-down"></i>
+                <span class="px-1">加入購物車</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 最底層 footer -->
+    <footer class="footer text-muted py-3">
+      <div class="container"></div>
+      <ul class="list-inline d-flex justify-content-center align-items-center">
+        <li class="list-inline-item">
+          © Copyright 2021 週末電影院 純屬練習作品
+        </li>
+        <li class="list-inline-item">
+          <a href="javascript::" class="text-info"
+            ><i class="fab fa-instagram fa-2x"></i
+          ></a>
+        </li>
+        <li class="list-inline-item">
+          <a href="javascript::" class="text-info"
+            ><i class="fab fa-facebook fa-2x"></i
+          ></a>
+        </li>
+      </ul>
+    </footer>
+
+    <!-- 購物車 -->
+    <div class="cart">
+      <a href="#">
+        <i class="fas fa-cart-plus fa-4x"></i>
+        <span class="cartText">3</span>
+      </a>
+    </div>
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="./JS/swiper.js"></script>
+  </body>
+</html>
