@@ -120,10 +120,19 @@ body {
 // 類型選單
 .listMenu {
   top: 120px;
-  .videoIcon {
-    @media (max-width: 1024px) {
+  @media (max-width: 1024px) {
+    display: none;
+    .videoIcon {
       display: none;
     }
+  }
+}
+
+// 強檔院線字體縮小
+.itemTitle {
+  @media (max-width: 768px) {
+    font-size: 30px;
+    width: 100%;
   }
 }
 
@@ -172,6 +181,7 @@ body {
   transform: rotate(-45deg);
   font-size: 18px;
 }
+// 手機板固定在下方的選單
 .mobileMenu {
   position: fixed;
   bottom: 0;
