@@ -109,24 +109,47 @@ body {
   font-size: 20px;
 }
 
+.btnCart {
+  position: relative;
+}
+
+.btnCart .cartTable {
+  z-index: 1;
+}
+
+.btnCart .badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+
+.dropdownMenu {
+  min-width: 300px;
+  right: 0;
+  left: auto;
+}
+
 .listMenu {
   top: 100px;
 }
 
-.cart {
+.rdCart {
   position: fixed;
-  right: 30px;
+  right: 10px;
   bottom: 20px;
   cursor: pointer;
 }
 
-.cart .cartText {
+.rdCart .rdBadge {
   position: absolute;
   top: -10px;
   right: -10px;
   z-index: 1;
-  width: 25px;
-  height: 25px;
+  width: 30px;
+  height: 30px;
   color: white;
   background: red;
   border-radius: 50%;
@@ -136,7 +159,7 @@ body {
 }
 
 @media (max-width: 768px) {
-  .cart {
+  .rdCart {
     display: none;
   }
 }
@@ -173,7 +196,7 @@ body {
 }
 
 .type {
-  z-index: 1;
+  z-index: 999;
   font-weight: 700;
   padding: 5px;
   width: 120px;
