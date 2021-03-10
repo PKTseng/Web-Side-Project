@@ -177,3 +177,15 @@ body {
 .movie1 {
   background-image: url('../images/movie1.jpg');
 }
+
+.movieInfo {
+  @media (max-width: 768px) {
+    margin-top: 50px;
+  }
+}
+
+.mobile {
+  @media (max-width: 768px) {
+    display: none;
+  }
+}

@@ -197,4 +197,16 @@ body {
 .movie1 {
   background-image: url("../images/movie1.jpg");
 }
+
+@media (max-width: 768px) {
+  .movieInfo {
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .mobile {
+    display: none;
+  }
+}
 /*# sourceMappingURL=home.css.map */
