@@ -133,33 +133,11 @@ body {
 }
 
 .listMenu {
-  top: 100px;
+  top: 120px;
 }
 
-.rdCart {
-  position: fixed;
-  right: 10px;
-  bottom: 20px;
-  cursor: pointer;
-}
-
-.rdCart .rdBadge {
-  position: absolute;
-  top: -10px;
-  right: -10px;
-  z-index: 1;
-  width: 30px;
-  height: 30px;
-  color: white;
-  background: red;
-  border-radius: 50%;
-  font-weight: 300;
-  font-size: 18px;
-  text-align: center;
-}
-
-@media (max-width: 768px) {
-  .rdCart {
+@media (max-width: 1024px) {
+  .listMenu .videoIcon {
     display: none;
   }
 }
@@ -167,6 +145,12 @@ body {
 .footer {
   font-size: 20px;
   background: #1e1e1e;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    font-size: 14px;
+  }
 }
 
 .menuText {
@@ -196,7 +180,7 @@ body {
 }
 
 .type {
-  z-index: 999;
+  z-index: 1;
   font-weight: 700;
   padding: 5px;
   width: 120px;
@@ -208,6 +192,23 @@ body {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
   font-size: 18px;
+}
+
+.mobileMenu {
+  position: fixed;
+  bottom: 0;
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mobileMenu {
+    display: block;
+    z-index: 2;
+  }
+  .mobileMenu .btn {
+    background: #f18329;
+    color: #fff;
+  }
 }
 
 .movie {
