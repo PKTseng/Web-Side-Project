@@ -34,8 +34,20 @@
         <a class="navbar-brand" href="./index.html">
           <img src="./images/logo.png" alt="" class="logo" />
         </a>
-        <div class="collapse navbar-collapse">
-          <div class="navbar-nav align-items-center">
+        <!-- RWD 漢堡選單按鈕 -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
             <div class="nav-item favorite">
               <a class="nav-link" href="./favorite.html">
                 <i class="far fa-heart"></i>
@@ -1219,7 +1231,7 @@
     </footer>
 
     <!-- mobile 裝置顯示 -->
-    <div class="container mobileMenu">
+    <div class="container-fluid mobileMenu">
       <div
         class="row text-white d-flex text-center bg-light border-0 justify-content-around py-2 bg-dark"
       >
