@@ -18,6 +18,9 @@ body {
   height: 70px;
 }
 
+.navbar {
+  z-index: 4;
+}
 .favorite {
   font-size: 20px;
 }
@@ -48,11 +51,14 @@ body {
 // 類型選單
 .listMenu {
   top: 120px;
+  z-index: 3;
   @media (max-width: 1024px) {
-    display: none;
     .videoIcon {
       display: none;
     }
+  }
+  @media (max-width: 767px) {
+    display: none;
   }
 }
 

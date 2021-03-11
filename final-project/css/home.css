@@ -148,6 +148,10 @@ body {
   height: 70px;
 }
 
+.navbar {
+  z-index: 4;
+}
+
 .favorite {
   font-size: 20px;
 }
@@ -177,13 +181,17 @@ body {
 
 .listMenu {
   top: 120px;
+  z-index: 3;
 }
 
 @media (max-width: 1024px) {
-  .listMenu {
+  .listMenu .videoIcon {
     display: none;
   }
-  .listMenu .videoIcon {
+}
+
+@media (max-width: 767px) {
+  .listMenu {
     display: none;
   }
 }
