@@ -173,6 +173,26 @@
           </table>
         </div>
       </div>
+      <div class="row justify-content-center">
+        <div class="col-10">
+          <div class="input-group mb-3">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="請輸入優惠碼"
+            />
+            <div class="input-group-append">
+              <button
+                class="btn btn-outline-danger"
+                type="button"
+                id="button-addon2"
+              >
+                套用優惠碼
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- 使用者訂單資訊 -->
@@ -196,7 +216,7 @@
                 id="userName"
                 placeholder="請輸入姓名"
               />
-              <label for="userPhone">訂購人電話</label>
+              <label for="userPhone">訂購人電話 :</label>
               <input
                 type="number"
                 class="form-control"
@@ -205,8 +225,13 @@
               />
             </div>
             <div class="form-group">
-              <label for="remarks">備註</label>
-              <textarea class="form-control" id="remarks" rows="3"></textarea>
+              <label for="remarks">備註 :</label>
+              <textarea
+                class="form-control"
+                id="remarks"
+                rows="10"
+                cols="50"
+              ></textarea>
             </div>
             <div class="text-right">
               <button class="btn btn-outline-danger">送出訂單</button>
