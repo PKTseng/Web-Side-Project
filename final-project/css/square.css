@@ -69,4 +69,10 @@ body {
 .priceMovie img {
   height: 150px;
 }
+
+label {
+  font-size: 24px;
+  font-weight: 600;
+  margin-top: 20px;
+}
 /*# sourceMappingURL=square.css.map */
