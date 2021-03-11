@@ -1,20 +1,7 @@
-body {
-  position: relative;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  background: #000;
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  color: #000;
-  margin: 0;
-  padding: 0;
-}
-
 .swiper-container {
-  width: 100%;
-  height: 100vh;
   margin-left: auto;
   margin-right: auto;
+  width: 100%;
 }
 
 .swiper-container .swiper-slide {
@@ -97,8 +84,63 @@ body {
   opacity: 0.4;
 }
 
-.gallery-thumbs .swiper-slide-thumb-active {
-  opacity: 1;
+.movie {
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 600px;
+}
+
+.movie1 {
+  background-image: url("../images/movie1.jpg");
+}
+
+.movie2 {
+  background-image: url("../images/movie2.jpg");
+}
+
+.movie3 {
+  background-image: url("../images/movie3.jpg");
+}
+
+.movie4 {
+  background-image: url("../images/movie4.jpg");
+}
+
+.movie5 {
+  background-image: url("../images/movie5.jpg");
+}
+
+.movie6 {
+  background-image: url("../images/movie6.jpg");
+}
+
+.movie7 {
+  background-image: url("../images/movie7.jpg");
+}
+
+.movie8 {
+  background-image: url("../images/movie8.jpg");
+}
+
+.movie9 {
+  background-image: url("../images/movie9.jpg");
+}
+
+.movie10 {
+  background-image: url("../images/movie10.jpg");
+}
+
+body {
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: #000;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
 }
 
 .logo {
@@ -215,53 +257,6 @@ body {
     display: block;
     z-index: 2;
   }
-}
-
-.movie {
-  background-position: center center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  height: 600px;
-}
-
-.movie1 {
-  background-image: url("../images/movie1.jpg");
-}
-
-.movie2 {
-  background-image: url("../images/movie2.jpg");
-}
-
-.movie3 {
-  background-image: url("../images/movie3.jpg");
-}
-
-.movie4 {
-  background-image: url("../images/movie4.jpg");
-}
-
-.movie5 {
-  background-image: url("../images/movie5.jpg");
-}
-
-.movie6 {
-  background-image: url("../images/movie6.jpg");
-}
-
-.movie7 {
-  background-image: url("../images/movie7.jpg");
-}
-
-.movie8 {
-  background-image: url("../images/movie8.jpg");
-}
-
-.movie9 {
-  background-image: url("../images/movie9.jpg");
-}
-
-.movie10 {
-  background-image: url("../images/movie10.jpg");
 }
 
 @media (max-width: 768px) {

@@ -1,3 +1,6 @@
+@import 'swiper';
+@import 'pageImage';
+
 body {
   position: relative;
   box-sizing: border-box;
@@ -7,82 +10,6 @@ body {
   color: #000;
   margin: 0;
   padding: 0;
-}
-
-// 整個 swiper 設定
-.swiper-container {
-  width: 100%;
-  height: 100vh;
-  margin-left: auto;
-  margin-right: auto;
-  .swiper-slide {
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    .bannerTitle {
-      font-size: 56px;
-      @media (max-width: 768px) {
-        font-size: 36px;
-        align-items: start;
-      }
-    }
-    .bannerInfo {
-      font-size: 18px;
-    }
-  }
-  .banner1 {
-    background-image: url('../images/banner/banner1.jpg');
-  }
-  .banner2 {
-    background-image: url('../images/banner/banner2.jpg');
-  }
-  .banner3 {
-    background-image: url('../images/banner/banner3.jpg');
-  }
-  .banner4 {
-    background-image: url('../images/banner/banner4.jpg');
-  }
-  .banner5 {
-    background-image: url('../images/banner/banner5.jpg');
-  }
-  .banner6 {
-    background-image: url('../images/banner/banner6.jpg');
-  }
-  .banner7 {
-    background-image: url('../images/banner/banner7.jpg');
-  }
-  .banner8 {
-    background-image: url('../images/banner/banner8.jpg');
-  }
-  .banner9 {
-    background-image: url('../images/banner/banner9.jpg');
-  }
-  .banner10 {
-    background-image: url('../images/banner/banner10.jpg');
-  }
-}
-
-// swiper 大圖設定
-.gallery-top {
-  width: 100%;
-  height: 450px;
-}
-
-// swiper 小圖設定
-.gallery-thumbs {
-  height: 15vh;
-  box-sizing: border-box;
-  padding: 10px 0;
-}
-
-.gallery-thumbs .swiper-slide {
-  height: 100%;
-  opacity: 0.4;
-}
-
-// 顯示當前 swiper 的小圖才會亮，其他暗色
-.gallery-thumbs .swiper-slide-thumb-active {
-  opacity: 1;
 }
 
 // 首頁 logo
@@ -190,44 +117,6 @@ body {
     display: block;
     z-index: 2;
   }
-}
-
-.movie {
-  background-position: center center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  height: 600px;
-}
-
-.movie1 {
-  background-image: url('../images/movie1.jpg');
-}
-.movie2 {
-  background-image: url('../images/movie2.jpg');
-}
-.movie3 {
-  background-image: url('../images/movie3.jpg');
-}
-.movie4 {
-  background-image: url('../images/movie4.jpg');
-}
-.movie5 {
-  background-image: url('../images/movie5.jpg');
-}
-.movie6 {
-  background-image: url('../images/movie6.jpg');
-}
-.movie7 {
-  background-image: url('../images/movie7.jpg');
-}
-.movie8 {
-  background-image: url('../images/movie8.jpg');
-}
-.movie9 {
-  background-image: url('../images/movie9.jpg');
-}
-.movie10 {
-  background-image: url('../images/movie10.jpg');
 }
 
 .movieInfo {
