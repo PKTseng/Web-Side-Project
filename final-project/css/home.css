@@ -266,6 +266,7 @@ body {
 @media (max-width: 768px) {
   .footer {
     font-size: 14px;
+    margin-bottom: 50px;
   }
 }
 
