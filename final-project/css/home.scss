@@ -21,8 +21,24 @@ body {
 .navbar {
   z-index: 4;
 }
+.navMenu {
+  display: none;
+  font-size: 20px;
+  @media (max-width: 768px) {
+    display: block;
+    a:nth-child(n) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
 .favorite {
   font-size: 20px;
+  @media (max-width: 768px) {
+    display: none;
+  }
 }
 
 // 右上角購物車
@@ -38,6 +54,12 @@ body {
     width: 25px;
     height: 25px;
     border-radius: 50%;
+  }
+}
+
+.cart {
+  @media (max-width: 768px) {
+    display: none;
   }
 }
 .dropdownMenu {
