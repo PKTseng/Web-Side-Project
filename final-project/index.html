@@ -48,15 +48,55 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            <div class="nav-item favorite">
-              <a class="nav-link" href="./favorite.html">
+            <div class="nav-item">
+              <!-- ------ -->
+              <div class="list-group navMenu" id="myList" role="tablist">
+                <a
+                  class="text-warning border border-warning rounded-pill mb-2 py-1 menuItem"
+                  data-toggle="list"
+                  href="#home"
+                  role="tab"
+                  >所有種類</a
+                >
+                <a
+                  class="text-warning border border-warning rounded-pill mb-2 py-1 menuItem"
+                  data-toggle="list"
+                  href="#menu-1"
+                  role="tab"
+                  >冒險</a
+                >
+                <a
+                  class="text-warning border border-warning rounded-pill mb-2 py-1 menuItem"
+                  data-toggle="list"
+                  href="#menu-2"
+                  role="tab"
+                  >劇情</a
+                >
+                <a
+                  class="text-warning border border-warning rounded-pill mb-2 py-1 menuItem"
+                  data-toggle="list"
+                  href="#menu-3"
+                  role="tab"
+                  >動作</a
+                >
+                <a
+                  class="text-warning border border-warning rounded-pill mb-2 py-1 menuItem"
+                  data-toggle="list"
+                  href="#menu-4"
+                  role="tab"
+                  >奇幻</a
+                >
+              </div>
+
+              <!-- ------ -->
+              <a class="nav-link favorite" href="./favorite.html">
                 <i class="far fa-heart"></i>
                 我的最愛</a
               >
             </div>
           </div>
           <!-- 右上幾角購物車 icon -->
-          <div class="dropdown ml-auto">
+          <div class="dropdown ml-auto cart">
             <button
               class="btn btn-sm btnCart text-white"
               type="button"
@@ -1258,6 +1298,13 @@
       integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
       crossorigin="anonymous"
     ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <!-- <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script> -->
     <script src="./JS/swiper.js"></script>
+    <script src="./JS/all.js"></script>
   </body>
 </html>
