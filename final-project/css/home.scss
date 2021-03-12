@@ -33,6 +33,20 @@ body {
       align-items: center;
     }
   }
+  .menuItem {
+    color: #ffc107;
+  }
+  & :active {
+    background: #ffc107;
+    color: #fff;
+  }
+  a,
+  a:hover,
+  a:active,
+  a:visited,
+  a:focus {
+    text-decoration: none;
+  }
 }
 .favorite {
   font-size: 20px;

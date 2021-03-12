@@ -178,6 +178,23 @@ body {
   }
 }
 
+.navMenu .menuItem {
+  color: #ffc107;
+}
+
+.navMenu :active {
+  background: #ffc107;
+  color: #fff;
+}
+
+.navMenu a,
+.navMenu a:hover,
+.navMenu a:active,
+.navMenu a:visited,
+.navMenu a:focus {
+  text-decoration: none;
+}
+
 .favorite {
   font-size: 20px;
 }
