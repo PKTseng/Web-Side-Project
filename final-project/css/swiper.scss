@@ -1,0 +1,69 @@
+// 整個 swiper 設定
+.swiper-container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  .swiper-slide {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    .bannerTitle {
+      font-size: 56px;
+      @media (max-width: 768px) {
+        font-size: 36px;
+        align-items: start;
+      }
+    }
+    .bannerInfo {
+      font-size: 18px;
+    }
+  }
+  .banner1 {
+    background-image: url('../images/banner/banner1.jpg');
+  }
+  .banner2 {
+    background-image: url('../images/banner/banner2.jpg');
+  }
+  .banner3 {
+    background-image: url('../images/banner/banner3.jpg');
+  }
+  .banner4 {
+    background-image: url('../images/banner/banner4.jpg');
+  }
+  .banner5 {
+    background-image: url('../images/banner/banner5.jpg');
+  }
+  .banner6 {
+    background-image: url('../images/banner/banner6.jpg');
+  }
+  .banner7 {
+    background-image: url('../images/banner/banner7.jpg');
+  }
+  .banner8 {
+    background-image: url('../images/banner/banner8.jpg');
+  }
+  .banner9 {
+    background-image: url('../images/banner/banner9.jpg');
+  }
+  .banner10 {
+    background-image: url('../images/banner/banner10.jpg');
+  }
+}
+
+// swiper 大圖設定
+.gallery-top {
+  width: 100%;
+  height: 450px;
+}
+
+// swiper 小圖設定
+.gallery-thumbs {
+  height: 15vh;
+  box-sizing: border-box;
+  padding: 10px 0;
+}
+
+.gallery-thumbs .swiper-slide {
+  height: 100%;
+  opacity: 0.4;
+}

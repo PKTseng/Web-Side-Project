@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import 'swiper';
+@import 'pageImage';
+
+body {
+  position: relative;
+  box-sizing: border-box;
+  background: #000;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+// 首頁 logo
+.logo {
+  height: 70px;
+}
+
+.navbar {
+  z-index: 4;
+}
+.navMenu {
+  display: none;
+  font-size: 20px;
+  @media (max-width: 768px) {
+    display: block;
+    a:nth-child(n) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  .menuItem {
+    color: #ffc107;
+  }
+  & :active {
+    background: #ffc107;
+    color: #fff;
+  }
+  a,
+  a:hover,
+  a:active,
+  a:visited,
+  a:focus {
+    text-decoration: none;
+  }
+}
+.favorite {
+  font-size: 20px;
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+// 右上角購物車
+.btnCart {
+  position: relative;
+  .cartTable {
+    z-index: 1;
+  }
+  .badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+  }
+}
+
+.cart {
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+.dropdownMenu {
+  min-width: 300px;
+
+  // 強制顯示左邊
+  right: 0;
+  left: auto;
+}
+
+// 類型選單
+.listMenu {
+  top: 120px;
+  z-index: 3;
+  @media (max-width: 1024px) {
+    .videoIcon {
+      display: none;
+    }
+  }
+  @media (max-width: 767px) {
+    display: none;
+  }
+}
+
+// 強檔院線字體縮小
+.itemTitle {
+  @media (max-width: 768px) {
+    font-size: 30px;
+    width: 100%;
+  }
+}
+
+// footer
+.footer {
+  font-size: 20px;
+  background: #1e1e1e;
+  @media (max-width: 768px) {
+    font-size: 14px;
+    margin-bottom: 50px;
+  }
+}
+
+// 更改類型選單的字體樣式
+.menuText {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+// 卡片
+.cardTitle {
+  position: relative;
+  overflow: hidden;
+  .thumbnail {
+    overflow: hidden;
+    img {
+      transform: scale(1, 1);
+      transition: 0.5s;
+    }
+    img:hover {
+      transform: scale(1.1, 1.1);
+    }
+  }
+}
+
+// 卡片標籤
+.type {
+  z-index: 1;
+  font-weight: 700;
+  padding: 5px;
+  width: 120px;
+  left: -30px;
+  top: 10px;
+  text-align: center;
+  position: absolute;
+  background: #ee5a24;
+  transform: rotate(-45deg);
+  font-size: 18px;
+}
+// 手機板固定在下方的選單
+.mobileMenu {
+  position: fixed;
+  bottom: 0;
+  display: none;
+  @media (max-width: 768px) {
+    display: block;
+    z-index: 2;
+  }
+}
+
+.movieInfo {
+  @media (max-width: 768px) {
+    margin-top: 50px;
+  }
+}
+
+.mobile {
+  @media (max-width: 768px) {
+    display: none;
+  }
+}

@@ -1,0 +1,1322 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Final Project</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <!-- Link Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.5.0/swiper-bundle.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.5.0/swiper-bundle.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./css/home.css" />
+    <!-- Demo styles -->
+  </head>
+
+  <body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="./index.html">
+          <img src="./images/logo.png" alt="" class="logo" />
+        </a>
+        <!-- RWD 漢堡選單按鈕 -->
+        <button class="navbar-toggler rwdMenu" type="button">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <div class="nav-item">
+              <!-- ------ -->
+              <div class="list-group navMenu" id="myList" role="tablist">
+                <a
+                  class="border border-warning rounded-pill mb-2 py-1 menuItem"
+                  data-toggle="list"
+                  href="#home"
+                  role="tab"
+                  >所有種類</a
+                >
+                <a
+                  class="border border-warning rounded-pill mb-2 py-1 menuItem"
+                  data-toggle="list"
+                  href="#menu-1"
+                  role="tab"
+                  >冒險</a
+                >
+                <a
+                  class="border border-warning rounded-pill mb-2 py-1 menuItem"
+                  data-toggle="list"
+                  href="#menu-2"
+                  role="tab"
+                  >劇情</a
+                >
+                <a
+                  class="border border-warning rounded-pill mb-2 py-1 menuItem"
+                  data-toggle="list"
+                  href="#menu-3"
+                  role="tab"
+                  >動作</a
+                >
+                <a
+                  class="border border-warning rounded-pill mb-2 py-1 menuItem"
+                  data-toggle="list"
+                  href="#menu-4"
+                  role="tab"
+                  >奇幻</a
+                >
+              </div>
+
+              <!-- ------ -->
+              <a class="nav-link favorite" href="./favorite.html">
+                <i class="far fa-heart"></i>
+                我的最愛</a
+              >
+            </div>
+          </div>
+          <!-- 右上幾角購物車 icon -->
+          <div class="dropdown ml-auto cart">
+            <button
+              class="btn btn-sm btnCart text-white"
+              type="button"
+              id="dropdownMenuButton"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <i class="fas fa-cart-arrow-down fa-3x"></i>
+              <span class="badge badge-pill badge-danger">2</span>
+            </button>
+            <!-- 點選購物車 -->
+            <div
+              class="dropdown-menu p-2 dropdownMenu"
+              aria-labelledby="dropdownMenuButton"
+            >
+              <!-- 購物車表格 -->
+              <table class="table table-sm">
+                <h6 class="mb-3 pt-2">已選擇電影</h6>
+                <tbody>
+                  <tr>
+                    <td class="align-middle text-center">
+                      <a
+                        href="#removeModal"
+                        class="text-muted"
+                        data-toggle="modal"
+                        data-target="#removeModal"
+                        data-title="刪除 白頭山：半島浩劫 1 件"
+                        data-backdrop="static"
+                      >
+                        <i class="far fa-trash-alt" aria-hidden="true"></i>
+                      </a>
+                    </td>
+                    <td class="align-middle">白頭山：半島浩劫</td>
+                    <td class="align-middle">1 部</td>
+                    <td class="align-middle text-right">$520</td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle text-center">
+                      <a
+                        href="#removeModal"
+                        class="text-muted"
+                        data-toggle="modal"
+                        data-target="#removeModal"
+                        data-title="刪除 魔物獵人 1"
+                        data-backdrop="static"
+                      >
+                        <i class="far fa-trash-alt" aria-hidden="true"></i>
+                      </a>
+                    </td>
+                    <td class="align-middle">魔物獵人</td>
+                    <td class="align-middle">1部</td>
+                    <td class="align-middle text-right">$300</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a
+                href="./square.html"
+                class="btn btn-outline-secondary btn-block"
+              >
+                <i class="fas fa-shopping-cart fa-lg"></i> 結帳去</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- Swiper -->
+    <!-- Banner 大圖 -->
+    <div class="swiper-container gallery-top">
+      <div class="swiper-wrapper">
+        <!--  banner 第1張 -->
+        <div class="swiper-slide banner1">
+          <div class="container h-100">
+            <div class="row text-white d-flex align-items-center h-100">
+              <div class="col-md-6">
+                <span class="badge badge-success p-2">冒險</span>
+                <h2 class="bannerTitle">魔物獵人</h2>
+                <p class="bannerInfo">
+                  一支聯合國部隊進入了通往另一個世界的穿越口，並在那協同其住民與巨型怪物戰鬥。該世界的人類必須與聯合國部隊們共同努力守護其穿越口，以防止怪物透過入口來侵襲地球。
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--  banner 第2張 -->
+        <div class="swiper-slide banner2">
+          <div class="container h-100">
+            <div class="row text-white d-flex align-items-center h-100">
+              <div class="col-md-6">
+                <span class="badge badge-success p-2">冒險</span>
+                <h2 class="bannerTitle">白頭山：半島浩劫</h2>
+                <p class="bannerInfo">
+                  2019
+                  年韓國災難電影，由李海準、金丙書執導，河正宇、李炳憲、馬東石、田慧振、裴秀智主演。
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--  banner 第3張 -->
+        <div class="swiper-slide banner3">
+          <div class="container h-100">
+            <div class="row text-white d-flex align-items-center h-100">
+              <div class="col-md-6">
+                <span class="badge badge-success p-2">劇情</span>
+                <h2 class="bannerTitle">異種獵殺</h2>
+                <p class="bannerInfo">
+                  在一艘目標潛網「新地球」的跨星際太空船上，一位即將成為人父的機械技師必須對抗不懷好意的星際恐怖力量，他們企圖將這太空船轉變成致命武器。
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--  banner 第4張 -->
+        <div class="swiper-slide banner4">
+          <div class="container h-100">
+            <div class="row text-white d-flex align-items-center h-100">
+              <div class="col-md-6">
+                <span class="badge badge-success p-2">動作</span>
+                <h2 class="bannerTitle">柔道煞星</h2>
+                <p class="bannerInfo">
+                  一部2020年美國奇幻動作片，由迪米泰瑞·洛戈塞蒂斯執導並與吉姆·麥格拉斯（Jim
+                  McGrath）共同編劇，改編自兩人創作的2017年同名漫畫；故事描述一群古代柔術高手將共同對抗威脅地球的外星入侵者。
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--  banner 第5張 -->
+        <div class="swiper-slide banner5">
+          <div class="container h-100">
+            <div class="row text-white d-flex align-items-center h-100">
+              <div class="col-md-6">
+                <span class="badge badge-success p-2">動作</span>
+                <h2 class="bannerTitle">尋龍使者：拉雅</h2>
+                <p class="bannerInfo">
+                  故事講述一個孤獨的勇士開始尋找世界上最後的一條龍，並從邪惡的德魯恩（Druun）手上拯救已經分裂為五個不同區域的奇幻王國「庫曼德拉」（Kumandra）。
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--  banner 第6張 -->
+        <div class="swiper-slide banner6">
+          <div class="container h-100">
+            <div class="row text-white d-flex align-items-center h-100">
+              <div class="col-md-6">
+                <span class="badge badge-success p-2">冒險</span>
+                <h2 class="bannerTitle">史酷比！劍與史酷比</h2>
+                <p class="bannerInfo">
+                  一個邪惡的女巫將幫派運送回騎士時代的騎士，法術鑄造巫師和噴火龍。
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--  banner 第7張 -->
+        <div class="swiper-slide banner7">
+          <div class="container h-100">
+            <div class="row text-white d-flex align-items-center h-100">
+              <div class="col-md-6">
+                <span class="badge badge-success p-2">冒險</span>
+                <h2 class="bannerTitle">古魯家族2：新石代</h2>
+                <p class="bannerInfo">
+                  《古魯家族：新石代》是一部2020年上映的美國3D電腦動畫冒險喜劇電影，由夢工廠動畫公司製作、環球影業發行。
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--  banner 第8張 -->
+        <div class="swiper-slide banner8">
+          <div class="container h-100">
+            <div class="row text-white d-flex align-items-center h-100">
+              <div class="col-md-6">
+                <span class="badge badge-success p-2">動作</span>
+                <h2 class="bannerTitle">TENET 天能</h2>
+                <p class="bannerInfo">
+                  《TENET天能》是一部於2020年上映英國與美國合拍的科幻動作驚悚片，由克里斯多福·諾蘭編劇和執導。主演包括約翰·大衛·華盛頓、羅伯·派汀森、伊莉莎白·戴比基、蒂普·卡柏迪亞、米高·肯恩和肯尼斯·布萊納。
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--  banner 第9張 -->
+        <div class="swiper-slide banner9">
+          <div class="container h-100">
+            <div class="row text-white d-flex align-items-center h-100">
+              <div class="col-md-6">
+                <span class="badge badge-success p-2">冒險</span>
+                <h2 class="bannerTitle">龍之心：致命復仇</h2>
+                <p class="bannerInfo">
+                  由伊凡·西爾維斯特里尼執導的2020年美國-英國-羅馬尼亞奇幻冒險電影。這是1996年電影《魔龍傳奇》的第三部非戲院首映前傳。影片在《龍之心4：心火之戰》之前開始，但在此之後結束。
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--  banner 第10張 -->
+        <div class="swiper-slide banner10">
+          <div class="container h-100">
+            <div class="row text-white d-flex align-items-center h-100">
+              <div class="col-md-6">
+                <span class="badge badge-success p-2">奇幻</span>
+                <h2 class="bannerTitle">勝利號</h2>
+                <p class="bannerInfo">
+                  《勝利號》是一部2021年韓國太空冒險電影，由趙成熙執導，宋仲基、金泰梨、陳善奎和柳海真主演，為韓國首部太空電影。
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Add Arrows -->
+      <div class="swiper-button-next swiper-button-white"></div>
+      <div class="swiper-button-prev swiper-button-white"></div>
+    </div>
+    <!-- Banner 小圖 -->
+    <div class="swiper-container gallery-thumbs">
+      <div class="swiper-wrapper">
+        <!--  banner 第1張 -->
+        <div
+          class="swiper-slide"
+          style="background-image: url(./images/banner/banner1.jpg)"
+        ></div>
+        <!--  banner 第2張 -->
+        <div
+          class="swiper-slide"
+          style="background-image: url(./images/banner/banner2.jpg)"
+        ></div>
+        <!--  banner 第3張 -->
+        <div
+          class="swiper-slide"
+          style="background-image: url(./images/banner/banner3.jpg)"
+        ></div>
+        <!--  banner 第4張 -->
+        <div
+          class="swiper-slide"
+          style="background-image: url(./images/banner/banner4.jpg)"
+        ></div>
+        <!--  banner 第5張 -->
+        <div
+          class="swiper-slide"
+          style="background-image: url(./images/banner/banner5.jpg)"
+        ></div>
+        <!--  banner 第6張 -->
+        <div
+          class="swiper-slide"
+          style="background-image: url(./images/banner/banner6.jpg)"
+        ></div>
+        <!--  banner 第7張 -->
+        <div
+          class="swiper-slide"
+          style="background-image: url(./images/banner/banner7.jpg)"
+        ></div>
+        <!--  banner 第8張 -->
+        <div
+          class="swiper-slide"
+          style="background-image: url(./images/banner/banner8.jpg)"
+        ></div>
+        <!--  banner 第9張 -->
+        <div
+          class="swiper-slide"
+          style="background-image: url(./images/banner/banner9.jpg)"
+        ></div>
+        <!--  banner 第10張 -->
+        <div
+          class="swiper-slide"
+          style="background-image: url(./images/banner/banner10.jpg)"
+        ></div>
+      </div>
+    </div>
+    <!-- 下半部所有電影內容 -->
+    <section class="container mt-5">
+      <div class="row">
+        <!-- 左邊選擇電影類型 -->
+        <div class="col-md-3">
+          <div class="list-group sticky-top listMenu">
+            <a
+              data-toggle="list"
+              href="#home"
+              class="list-group-item list-group-item-action active list-group-item-dark"
+            >
+              <span class="menuText"> 全部顯示</span>
+            </a>
+            <a
+              data-toggle="list"
+              href="#menu-1"
+              class="list-group-item list-group-item-action list-group-item-dark d-flex align-items-center justify-content-center"
+            >
+              <i class="fas fa-film fa-2x videoIcon"></i>
+              <span class="ml-3 menuText">冒險</span>
+              <span class="badge badge-light badge-pill ml-auto">5</span>
+            </a>
+            <a
+              data-toggle="list"
+              href="#menu-2"
+              class="list-group-item list-group-item-action list-group-item-dark d-flex align-items-center"
+              ><i class="fas fa-film fa-2x videoIcon"></i>
+              <span class="ml-3 menuText">劇情類</span>
+              <span class="badge badge-light badge-pill ml-auto">1</span>
+            </a>
+            <a
+              data-toggle="list"
+              href="#menu-3"
+              href="#"
+              class="list-group-item list-group-item-action list-group-item-dark d-flex align-items-center"
+              ><i class="fas fa-film fa-2x videoIcon"></i>
+              <span class="ml-3 menuText">動作類</span>
+              <span class="badge badge-light badge-pill ml-auto">3</span>
+            </a>
+            <a
+              data-toggle="list"
+              href="#menu-4"
+              href="#"
+              class="list-group-item list-group-item-action list-group-item-dark d-flex align-items-center"
+              ><i class="fas fa-film fa-2x videoIcon"></i>
+              <span class="ml-3 menuText"> 奇幻</span>
+              <span class="badge badge-light badge-pill ml-auto">3</span>
+            </a>
+          </div>
+        </div>
+        <!-- 右邊所有電影清單 -->
+        <div class="col-md-9">
+          <!-- 標題 & 搜尋欄 -->
+          <div class="row">
+            <div class="col-12 d-flex justify-content-between">
+              <h1 class="text-white itemTitle">強檔院線</h1>
+              <form class="from-line my-lg-0">
+                <div class="input-group mb-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="輸入關鍵字"
+                    aria-label="Recipient's username"
+                    aria-describedby="button-addon2"
+                  />
+                  <div class="input-group-append">
+                    <button
+                      class="btn btn-outline-secondary"
+                      type="button"
+                      id="button-addon2"
+                    >
+                      <i class="fas fa-search"></i>
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <!-- 所有電影種類 -->
+          <div class="tab-content">
+            <div class="tab-pane active" id="home">
+              <div class="row">
+                <!--  第1張 魔物獵人 冒險類-->
+                <div class="col-md-6 mb-4 col-lg-4">
+                  <div class="card h-100 border-0 bg-dark text-light cardTitle">
+                    <div class="type">冒險</div>
+                    <div class="thumbnail">
+                      <img
+                        src="./images/movie1.jpg"
+                        class="card-img-top"
+                        alt="..."
+                      />
+                    </div>
+                    <div
+                      class="card-body d-flex justify-content-between align-items-center"
+                    >
+                      <h4 class="m-0">魔物獵人</h4>
+                      <button class="btn btn-sm">
+                        <i class="fa-heart fa-lg text-white far"></i>
+                      </button>
+                    </div>
+                    <div
+                      class="card-footer d-flex justify-content-around border-white"
+                    >
+                      <a
+                        href="./movie1.html"
+                        class="btn btn-outline-light btn-sm"
+                        >查看更多</a
+                      >
+                      <a href="#" class="btn btn-outline-danger btn-sm"
+                        >加入購物車</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <!-- 第2張 白頭山：半島浩劫 冒險類-->
+                <div class="col-md-6 mb-4 col-lg-4">
+                  <div class="card h-100 border-0 bg-dark text-light cardTitle">
+                    <div class="type">冒險</div>
+                    <div class="thumbnail">
+                      <img
+                        src="./images/movie2.jpg"
+                        class="card-img-top"
+                        alt="..."
+                      />
+                    </div>
+                    <div
+                      class="card-body d-flex justify-content-between align-items-center"
+                    >
+                      <h4 class="m-0">白頭山：半島浩劫</h4>
+                      <button class="btn btn-sm">
+                        <i class="fa-heart fa-lg text-white far"></i>
+                      </button>
+                    </div>
+                    <div
+                      class="card-footer d-flex justify-content-around border-white"
+                    >
+                      <a
+                        href="./movie2.html"
+                        class="btn btn-outline-light btn-sm"
+                        >查看更多</a
+                      >
+                      <a href="#" class="btn btn-outline-danger btn-sm"
+                        >加入購物車</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <!-- 第3張 異種獵殺 劇情類-->
+                <div class="col-md-6 mb-4 col-lg-4">
+                  <div class="card h-100 border-0 bg-dark text-light cardTitle">
+                    <div class="type">劇情</div>
+                    <div class="thumbnail">
+                      <img
+                        src="./images/movie3.jpg"
+                        class="card-img-top"
+                        alt="..."
+                      />
+                    </div>
+
+                    <div
+                      class="card-body d-flex justify-content-between align-items-center"
+                    >
+                      <h4 class="m-0">異種獵殺</h4>
+                      <button class="btn btn-sm">
+                        <i class="fa-heart fa-lg text-white far"></i>
+                      </button>
+                    </div>
+                    <div
+                      class="card-footer d-flex justify-content-around border-white"
+                    >
+                      <a
+                        href="./movie3.html"
+                        class="btn btn-outline-light btn-sm"
+                        >查看更多</a
+                      >
+                      <a href="#" class="btn btn-outline-danger btn-sm"
+                        >加入購物車</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <!-- 第4張 柔道煞星 動作類-->
+                <div class="col-md-6 mb-4 col-lg-4">
+                  <div class="card h-100 border-0 bg-dark text-light cardTitle">
+                    <div class="type">動作</div>
+                    <div class="thumbnail">
+                      <img
+                        src="./images/movie4.jpg"
+                        class="card-img-top"
+                        alt="..."
+                      />
+                    </div>
+
+                    <div
+                      class="card-body d-flex justify-content-between align-items-center"
+                    >
+                      <h4 class="m-0">柔道煞星</h4>
+                      <button class="btn btn-sm">
+                        <i class="fa-heart fa-lg text-white far"></i>
+                      </button>
+                    </div>
+                    <div
+                      class="card-footer d-flex justify-content-around border-white"
+                    >
+                      <a
+                        href="./movie4.html"
+                        class="btn btn-outline-light btn-sm"
+                        >查看更多</a
+                      >
+                      <a href="#" class="btn btn-outline-danger btn-sm"
+                        >加入購物車</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <!-- 第5張 尋龍使者：拉雅 動作類--->
+                <div class="col-md-6 mb-4 col-lg-4">
+                  <div class="card h-100 border-0 bg-dark text-light cardTitle">
+                    <div class="type">動作</div>
+                    <div class="thumbnail">
+                      <img
+                        src="./images/movie5.jpg"
+                        class="card-img-top"
+                        alt="..."
+                      />
+                    </div>
+
+                    <div
+                      class="card-body d-flex justify-content-between align-items-center"
+                    >
+                      <h4 class="m-0">尋龍使者：拉雅</h4>
+                      <button class="btn btn-sm">
+                        <i class="fa-heart fa-lg text-white far"></i>
+                      </button>
+                    </div>
+                    <div
+                      class="card-footer d-flex justify-content-around border-white"
+                    >
+                      <a
+                        href="./movie5.html"
+                        class="btn btn-outline-light btn-sm"
+                        >查看更多</a
+                      >
+                      <a href="#" class="btn btn-outline-danger btn-sm"
+                        >加入購物車</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <!-- 第6張 劍與史酷比 冒險類-->
+                <div class="col-md-6 mb-4 col-lg-4">
+                  <div class="card h-100 border-0 bg-dark text-light cardTitle">
+                    <div class="type">冒險</div>
+                    <div class="thumbnail">
+                      <img
+                        src="./images/movie6.jpg"
+                        class="card-img-top"
+                        alt="..."
+                      />
+                    </div>
+
+                    <div
+                      class="card-body d-flex justify-content-between align-items-center"
+                    >
+                      <h4 class="m-0">劍與史酷比</h4>
+                      <button class="btn btn-sm">
+                        <i class="fa-heart fa-lg text-white far"></i>
+                      </button>
+                    </div>
+                    <div
+                      class="card-footer d-flex justify-content-around border-white"
+                    >
+                      <a
+                        href="./movie6.html"
+                        class="btn btn-outline-light btn-sm"
+                        >查看更多</a
+                      >
+                      <a href="#" class="btn btn-outline-danger btn-sm"
+                        >加入購物車</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <!-- 第7張 古魯家族2：新石代 冒險類 -->
+                <div class="col-md-6 mb-4 col-lg-4">
+                  <div class="card h-100 border-0 bg-dark text-light cardTitle">
+                    <div class="type">冒險</div>
+                    <div class="thumbnail">
+                      <img
+                        src="./images/movie7.jpg"
+                        class="card-img-top"
+                        alt="..."
+                      />
+                    </div>
+
+                    <div
+                      class="card-body d-flex justify-content-between align-items-center"
+                    >
+                      <h4 class="m-0">古魯家族2：新石代</h4>
+                      <button class="btn btn-sm">
+                        <i class="fa-heart fa-lg text-white far"></i>
+                      </button>
+                    </div>
+                    <div
+                      class="card-footer d-flex justify-content-around border-white"
+                    >
+                      <a
+                        href="./movie7.html"
+                        class="btn btn-outline-light btn-sm"
+                        >查看更多</a
+                      >
+                      <a href="#" class="btn btn-outline-danger btn-sm"
+                        >加入購物車</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <!-- 第8張 TENET天能 動作類-->
+                <div class="col-md-6 mb-4 col-lg-4">
+                  <div class="card h-100 border-0 bg-dark text-light cardTitle">
+                    <div class="type">動作</div>
+                    <div class="thumbnail">
+                      <img
+                        src="./images/movie8.jpg"
+                        class="card-img-top"
+                        alt="..."
+                      />
+                    </div>
+
+                    <div
+                      class="card-body d-flex justify-content-between align-items-center"
+                    >
+                      <h4 class="m-0">TENET天能</h4>
+                      <button class="btn btn-sm">
+                        <i class="fa-heart fa-lg text-white far"></i>
+                      </button>
+                    </div>
+                    <div
+                      class="card-footer d-flex justify-content-around border-white"
+                    >
+                      <a
+                        href="./movie8.html"
+                        class="btn btn-outline-light btn-sm"
+                        >查看更多</a
+                      >
+                      <a href="#" class="btn btn-outline-danger btn-sm"
+                        >加入購物車</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <!-- 第9張 龍之心：致命復仇 冒險類-->
+                <div class="col-md-6 mb-4 col-lg-4">
+                  <div class="card h-100 border-0 bg-dark text-light cardTitle">
+                    <div class="type">冒險</div>
+                    <div class="thumbnail">
+                      <img
+                        src="./images/movie9.jpg"
+                        class="card-img-top"
+                        alt="..."
+                      />
+                    </div>
+
+                    <div
+                      class="card-body d-flex justify-content-between align-items-center"
+                    >
+                      <h4 class="m-0">龍之心：致命復仇</h4>
+                      <button class="btn btn-sm">
+                        <i class="fa-heart fa-lg text-white far"></i>
+                      </button>
+                    </div>
+                    <div
+                      class="card-footer d-flex justify-content-around border-white"
+                    >
+                      <a
+                        href="./movie9.html"
+                        class="btn btn-outline-light btn-sm"
+                        >查看更多</a
+                      >
+                      <a href="#" class="btn btn-outline-danger btn-sm"
+                        >加入購物車</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <!-- 第10張 勝利號 奇幻類-->
+                <div class="col-md-6 mb-4 col-lg-4">
+                  <div class="card h-100 border-0 bg-dark text-light cardTitle">
+                    <div class="type">奇幻</div>
+                    <div class="thumbnail">
+                      <img
+                        src="./images/movie10.jpg"
+                        class="card-img-top"
+                        alt="..."
+                      />
+                    </div>
+
+                    <div
+                      class="card-body d-flex justify-content-between align-items-center"
+                    >
+                      <h4 class="m-0">勝利號</h4>
+                      <button class="btn btn-sm">
+                        <i class="fa-heart fa-lg text-white far"></i>
+                      </button>
+                    </div>
+                    <div
+                      class="card-footer d-flex justify-content-around border-white"
+                    >
+                      <a
+                        href="./movie10.html"
+                        class="btn btn-outline-light btn-sm"
+                        >查看更多</a
+                      >
+                      <a href="#" class="btn btn-outline-danger btn-sm"
+                        >加入購物車</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <!-- 第11張 末日終結戰 奇幻類-->
+                <div class="col-md-6 mb-4 col-lg-4">
+                  <div class="card h-100 border-0 bg-dark text-light cardTitle">
+                    <div class="type">奇幻</div>
+                    <div class="thumbnail">
+                      <img
+                        src="./images/movie11.jpg"
+                        class="card-img-top"
+                        alt="..."
+                      />
+                    </div>
+
+                    <div
+                      class="card-body d-flex justify-content-between align-items-center"
+                    >
+                      <h4 class="m-0">末日終結戰</h4>
+                      <button class="btn btn-sm">
+                        <i class="fa-heart fa-lg text-white far"></i>
+                      </button>
+                    </div>
+                    <div
+                      class="card-footer d-flex justify-content-around border-white"
+                    >
+                      <a
+                        href="./movie11.html"
+                        class="btn btn-outline-light btn-sm"
+                        >查看更多</a
+                      >
+                      <a href="#" class="btn btn-outline-danger btn-sm"
+                        >加入購物車</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <!-- 第12張 全民小英雄 奇幻類-->
+                <div class="col-md-6 mb-4 col-lg-4">
+                  <div class="card h-100 border-0 bg-dark text-light cardTitle">
+                    <div class="type">奇幻</div>
+                    <div class="thumbnail">
+                      <img
+                        src="./images/movie12.jpg"
+                        class="card-img-top"
+                        alt="..."
+                      />
+                    </div>
+
+                    <div
+                      class="card-body d-flex justify-content-between align-items-center"
+                    >
+                      <h4 class="m-0">全民小英雄</h4>
+                      <button class="btn btn-sm">
+                        <i class="fa-heart fa-lg text-white far"></i>
+                      </button>
+                    </div>
+                    <div
+                      class="card-footer d-flex justify-content-around border-white"
+                    >
+                      <a
+                        href="./movie12.html"
+                        class="btn btn-outline-light btn-sm"
+                        >查看更多</a
+                      >
+                      <a href="#" class="btn btn-outline-danger btn-sm"
+                        >加入購物車</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- menu 冒險類 -->
+            <div class="tab-pane" id="menu-1">
+              <div class="row">
+                <!--  第1張 魔物獵人 冒險類-->
+                <div class="col-md-6 mb-4 col-lg-4">
+                  <div class="card h-100 border-0 bg-dark text-light cardTitle">
+                    <div class="type">冒險</div>
+                    <div class="thumbnail">
+                      <img
+                        src="./images/movie1.jpg"
+                        class="card-img-top"
+                        alt="..."
+                      />
+                    </div>
+
+                    <div
+                      class="card-body d-flex justify-content-between align-items-center"
+                    >
+                      <h4 class="m-0">魔物獵人</h4>
+                      <button class="btn btn-sm">
+                        <i class="fa-heart fa-lg text-white far"></i>
+                      </button>
+                    </div>
+                    <div
+                      class="card-footer d-flex justify-content-around border-white"
+                    >
+                      <a href="#" class="btn btn-outline-light btn-sm"
+                        >查看更多</a
+                      >
+                      <a href="#" class="btn btn-outline-danger btn-sm"
+                        >加入購物車</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <!-- 第2張 白頭山：半島浩劫 冒險類-->
+                <div class="col-md-6 mb-4 col-lg-4">
+                  <div class="card h-100 border-0 bg-dark text-light cardTitle">
+                    <div class="type">冒險</div>
+                    <div class="thumbnail">
+                      <img
+                        src="./images/movie2.jpg"
+                        class="card-img-top"
+                        alt="..."
+                      />
+                    </div>
+
+                    <div
+                      class="card-body d-flex justify-content-between align-items-center"
+                    >
+                      <h4 class="m-0">白頭山：半島浩劫</h4>
+                      <button class="btn btn-sm">
+                        <i class="fa-heart fa-lg text-white far"></i>
+                      </button>
+                    </div>
+                    <div
+                      class="card-footer d-flex justify-content-around border-white"
+                    >
+                      <a href="#" class="btn btn-outline-light btn-sm"
+                        >查看更多</a
+                      >
+                      <a href="#" class="btn btn-outline-danger btn-sm"
+                        >加入購物車</a
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 第6張 劍與史酷比 冒險類-->
+                <div class="col-md-6 mb-4 col-lg-4">
+                  <div class="card h-100 border-0 bg-dark text-light cardTitle">
+                    <div class="type">冒險</div>
+                    <div class="thumbnail">
+                      <img
+                        src="./images/movie6.jpg"
+                        class="card-img-top"
+                        alt="..."
+                      />
+                    </div>
+
+                    <div
+                      class="card-body d-flex justify-content-between align-items-center"
+                    >
+                      <h4 class="m-0">劍與史酷比</h4>
+                      <button class="btn btn-sm">
+                        <i class="fa-heart fa-lg text-white far"></i>
+                      </button>
+                    </div>
+                    <div
+                      class="card-footer d-flex justify-content-around border-white"
+                    >
+                      <a href="#" class="btn btn-outline-light btn-sm"
+                        >查看更多</a
+                      >
+                      <a href="#" class="btn btn-outline-danger btn-sm"
+                        >加入購物車</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <!-- 第7張 古魯家族2：新石代 冒險類 -->
+                <div class="col-md-6 mb-4 col-lg-4">
+                  <div class="card h-100 border-0 bg-dark text-light cardTitle">
+                    <div class="type">冒險</div>
+                    <div class="thumbnail">
+                      <img
+                        src="./images/movie7.jpg"
+                        class="card-img-top"
+                        alt="..."
+                      />
+                    </div>
+
+                    <div
+                      class="card-body d-flex justify-content-between align-items-center"
+                    >
+                      <h4 class="m-0">古魯家族2：新石代</h4>
+                      <button class="btn btn-sm">
+                        <i class="fa-heart fa-lg text-white far"></i>
+                      </button>
+                    </div>
+                    <div
+                      class="card-footer d-flex justify-content-around border-white"
+                    >
+                      <a href="#" class="btn btn-outline-light btn-sm"
+                        >查看更多</a
+                      >
+                      <a href="#" class="btn btn-outline-danger btn-sm"
+                        >加入購物車</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <!-- 第9張 龍之心：致命復仇 冒險類-->
+                <div class="col-md-6 mb-4 col-lg-4">
+                  <div class="card h-100 border-0 bg-dark text-light cardTitle">
+                    <div class="type">冒險</div>
+                    <div class="thumbnail">
+                      <img
+                        src="./images/movie9.jpg"
+                        class="card-img-top"
+                        alt="..."
+                      />
+                    </div>
+
+                    <div
+                      class="card-body d-flex justify-content-between align-items-center"
+                    >
+                      <h4 class="m-0">龍之心：致命復仇</h4>
+                      <button class="btn btn-sm">
+                        <i class="fa-heart fa-lg text-white far"></i>
+                      </button>
+                    </div>
+                    <div
+                      class="card-footer d-flex justify-content-around border-white"
+                    >
+                      <a href="#" class="btn btn-outline-light btn-sm"
+                        >查看更多</a
+                      >
+                      <a href="#" class="btn btn-outline-danger btn-sm"
+                        >加入購物車</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- menu 劇情類 -->
+            <div class="tab-pane" id="menu-2">
+              <div class="row">
+                <!-- 第3張 異種獵殺 劇情類-->
+                <div class="col-md-6 mb-4 col-lg-4">
+                  <div class="card h-100 border-0 bg-dark text-light cardTitle">
+                    <div class="type">劇情</div>
+                    <div class="thumbnail">
+                      <img
+                        src="./images/movie3.jpg"
+                        class="card-img-top"
+                        alt="..."
+                      />
+                    </div>
+
+                    <div
+                      class="card-body d-flex justify-content-between align-items-center"
+                    >
+                      <h4 class="m-0">異種獵殺</h4>
+                      <button class="btn btn-sm">
+                        <i class="fa-heart fa-lg text-white far"></i>
+                      </button>
+                    </div>
+                    <div
+                      class="card-footer d-flex justify-content-around border-white"
+                    >
+                      <a href="#" class="btn btn-outline-light btn-sm"
+                        >查看更多</a
+                      >
+                      <a href="#" class="btn btn-outline-danger btn-sm"
+                        >加入購物車</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- menu 動作類 -->
+            <div class="tab-pane" id="menu-3">
+              <div class="row">
+                <!-- 第4張 柔道煞星 動作類-->
+                <div class="col-md-6 mb-4 col-lg-4">
+                  <div class="card h-100 border-0 bg-dark text-light cardTitle">
+                    <div class="type">動作</div>
+                    <div class="thumbnail">
+                      <img
+                        src="./images/movie4.jpg"
+                        class="card-img-top"
+                        alt="..."
+                      />
+                    </div>
+
+                    <div
+                      class="card-body d-flex justify-content-between align-items-center"
+                    >
+                      <h4 class="m-0">柔道煞星</h4>
+                      <button class="btn btn-sm">
+                        <i class="fa-heart fa-lg text-white far"></i>
+                      </button>
+                    </div>
+                    <div
+                      class="card-footer d-flex justify-content-around border-white"
+                    >
+                      <a href="#" class="btn btn-outline-light btn-sm"
+                        >查看更多</a
+                      >
+                      <a href="#" class="btn btn-outline-danger btn-sm"
+                        >加入購物車</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <!-- 第5張 尋龍使者：拉雅 動作類--->
+                <div class="col-md-6 mb-4 col-lg-4">
+                  <div class="card h-100 border-0 bg-dark text-light cardTitle">
+                    <div class="type">動作</div>
+                    <div class="thumbnail">
+                      <img
+                        src="./images/movie5.jpg"
+                        class="card-img-top"
+                        alt="..."
+                      />
+                    </div>
+
+                    <div
+                      class="card-body d-flex justify-content-between align-items-center"
+                    >
+                      <h4 class="m-0">尋龍使者：拉雅</h4>
+                      <button class="btn btn-sm">
+                        <i class="fa-heart fa-lg text-white far"></i>
+                      </button>
+                    </div>
+                    <div
+                      class="card-footer d-flex justify-content-around border-white"
+                    >
+                      <a href="#" class="btn btn-outline-light btn-sm"
+                        >查看更多</a
+                      >
+                      <a href="#" class="btn btn-outline-danger btn-sm"
+                        >加入購物車</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <!-- 第8張 TENET天能 動作類-->
+                <div class="col-md-6 mb-4 col-lg-4">
+                  <div class="card h-100 border-0 bg-dark text-light cardTitle">
+                    <div class="type">動作</div>
+                    <div class="thumbnail">
+                      <img
+                        src="./images/movie8.jpg"
+                        class="card-img-top"
+                        alt="..."
+                      />
+                    </div>
+
+                    <div
+                      class="card-body d-flex justify-content-between align-items-center"
+                    >
+                      <h4 class="m-0">TENET天能</h4>
+                      <button class="btn btn-sm">
+                        <i class="fa-heart fa-lg text-white far"></i>
+                      </button>
+                    </div>
+                    <div
+                      class="card-footer d-flex justify-content-around border-white"
+                    >
+                      <a href="#" class="btn btn-outline-light btn-sm"
+                        >查看更多</a
+                      >
+                      <a href="#" class="btn btn-outline-danger btn-sm"
+                        >加入購物車</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- menu 奇幻類 -->
+            <div class="tab-pane" id="menu-4">
+              <div class="row">
+                <!-- 第10張 勝利號 奇幻類-->
+                <div class="col-md-6 mb-4 col-lg-4">
+                  <div class="card h-100 border-0 bg-dark text-light cardTitle">
+                    <div class="type">奇幻</div>
+                    <div class="thumbnail">
+                      <img
+                        src="./images/movie10.jpg"
+                        class="card-img-top"
+                        alt="..."
+                      />
+                    </div>
+
+                    <div
+                      class="card-body d-flex justify-content-between align-items-center"
+                    >
+                      <h4 class="m-0">勝利號</h4>
+                      <button class="btn btn-sm">
+                        <i class="fa-heart fa-lg text-white far"></i>
+                      </button>
+                    </div>
+                    <div
+                      class="card-footer d-flex justify-content-around border-white"
+                    >
+                      <a href="#" class="btn btn-outline-light btn-sm"
+                        >查看更多</a
+                      >
+                      <a href="#" class="btn btn-outline-danger btn-sm"
+                        >加入購物車</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <!-- 第11張 末日終結戰 奇幻類-->
+                <div class="col-md-6 mb-4 col-lg-4">
+                  <div class="card h-100 border-0 bg-dark text-light cardTitle">
+                    <div class="type">奇幻</div>
+                    <div class="thumbnail">
+                      <img
+                        src="./images/movie11.jpg"
+                        class="card-img-top"
+                        alt="..."
+                      />
+                    </div>
+
+                    <div
+                      class="card-body d-flex justify-content-between align-items-center"
+                    >
+                      <h4 class="m-0">末日終結戰</h4>
+                      <button class="btn btn-sm">
+                        <i class="fa-heart fa-lg text-white far"></i>
+                      </button>
+                    </div>
+                    <div
+                      class="card-footer d-flex justify-content-around border-white"
+                    >
+                      <a href="#" class="btn btn-outline-light btn-sm"
+                        >查看更多</a
+                      >
+                      <a href="#" class="btn btn-outline-danger btn-sm"
+                        >加入購物車</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <!-- 第12張 全民小英雄 奇幻類-->
+                <div class="col-md-6 mb-4 col-lg-4">
+                  <div class="card h-100 border-0 bg-dark text-light cardTitle">
+                    <div class="type">奇幻</div>
+                    <div class="thumbnail">
+                      <img
+                        src="./images/movie12.jpg"
+                        class="card-img-top"
+                        alt="..."
+                      />
+                    </div>
+
+                    <div
+                      class="card-body d-flex justify-content-between align-items-center"
+                    >
+                      <h4 class="m-0">全民小英雄</h4>
+                      <button class="btn btn-sm">
+                        <i class="fa-heart fa-lg text-white far"></i>
+                      </button>
+                    </div>
+                    <div
+                      class="card-footer d-flex justify-content-around border-white"
+                    >
+                      <a href="#" class="btn btn-outline-light btn-sm"
+                        >查看更多</a
+                      >
+                      <a href="#" class="btn btn-outline-danger btn-sm"
+                        >加入購物車</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 最底層 footer -->
+    <footer class="footer py-3 text-muted mt-4">
+      <div class="container"></div>
+      <ul class="list-inline d-flex justify-content-center align-items-center">
+        <li class="list-inline-item">
+          © Copyright 2021 週末電影院 純屬練習作品
+        </li>
+        <li class="list-inline-item">
+          <a href="javascript::" class="text-info"
+            ><i class="fab fa-instagram fa-2x"></i
+          ></a>
+        </li>
+        <li class="list-inline-item">
+          <a href="javascript::" class="text-info"
+            ><i class="fab fa-facebook fa-2x"></i
+          ></a>
+        </li>
+      </ul>
+    </footer>
+
+    <!-- mobile 裝置顯示 -->
+    <div class="container-fluid mobileMenu">
+      <div
+        class="row text-white d-flex text-center bg-light border-0 justify-content-around py-2 bg-dark"
+      >
+        <a href="#" class="btn btn-outline-warning col-5">我的最愛 </a>
+        <a href="#" class="btn btn-outline-warning col-5">查看購物車</a>
+
+        <!-- <div class="col-6">加到購物車</div> -->
+      </div>
+    </div>
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <!-- <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script> -->
+    <script src="./JS/swiper.js"></script>
+    <script src="./JS/all.js"></script>
+  </body>
+</html>

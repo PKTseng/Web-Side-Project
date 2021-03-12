@@ -1,0 +1,78 @@
+body {
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: #000;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+.logo {
+  height: 70px;
+}
+
+.favorite {
+  font-size: 20px;
+}
+
+.btnCart {
+  position: relative;
+}
+
+.btnCart .cartTable {
+  z-index: 1;
+}
+
+.btnCart .badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+
+.dropdownMenu {
+  min-width: 300px;
+  right: 0;
+  left: auto;
+}
+
+.mobileMenu {
+  position: fixed;
+  bottom: 0;
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mobileMenu {
+    display: block;
+    z-index: 2;
+  }
+}
+
+@media (max-width: 768px) {
+  .movieInfo {
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .mobile {
+    display: none;
+  }
+}
+
+.priceMovie img {
+  height: 150px;
+}
+
+label {
+  font-size: 24px;
+  font-weight: 600;
+  margin-top: 20px;
+}
+/*# sourceMappingURL=square.css.map */

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Final Project</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <!-- Link Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.5.0/swiper-bundle.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.5.0/swiper-bundle.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./css/home.css" />
+    <!-- Demo styles -->
+  </head>
+
+  <body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="./index.html">
+          <img src="./images/logo.png" alt="" class="logo" />
+        </a>
+        <!-- RWD 漢堡選單按鈕 -->
+        <button class="navbar-toggler rwdMenu" type="button">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <div class="nav-item">
+              <!-- ------ -->
+              <div class="list-group navMenu" id="myList" role="tablist">
+                <a
+                  class="border border-warning rounded-pill mb-2 py-1 menuItem"
+                  data-toggle="list"
+                  href="#home"
+                  role="tab"
+                  >所有種類</a
+                >
+                <a
+                  class="border border-warning rounded-pill mb-2 py-1 menuItem"
+                  data-toggle="list"
+                  href="#menu-1"
+                  role="tab"
+                  >冒險</a
+                >
+                <a
+                  class="border border-warning rounded-pill mb-2 py-1 menuItem"
+                  data-toggle="list"
+                  href="#menu-2"
+                  role="tab"
+                  >劇情</a
+                >
+                <a
+                  class="border border-warning rounded-pill mb-2 py-1 menuItem"
+                  data-toggle="list"
+                  href="#menu-3"
+                  role="tab"
+                  >動作</a
+                >
+                <a
+                  class="border border-warning rounded-pill mb-2 py-1 menuItem"
+                  data-toggle="list"
+                  href="#menu-4"
+                  role="tab"
+                  >奇幻</a
+                >
+              </div>
+
+              <!-- ------ -->
+              <a class="nav-link favorite" href="./favorite.html">
+                <i class="far fa-heart"></i>
+                我的最愛</a
+              >
+            </div>
+          </div>
+          <!-- 右上幾角購物車 icon -->
+          <div class="dropdown ml-auto cart">
+            <button
+              class="btn btn-sm btnCart text-white"
+              type="button"
+              id="dropdownMenuButton"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <i class="fas fa-cart-arrow-down fa-3x"></i>
+              <span class="badge badge-pill badge-danger">2</span>
+            </button>
+            <!-- 點選購物車 -->
+            <div
+              class="dropdown-menu p-2 dropdownMenu"
+              aria-labelledby="dropdownMenuButton"
+            >
+              <!-- 購物車表格 -->
+              <table class="table table-sm">
+                <h6 class="mb-3 pt-2">已選擇電影</h6>
+                <tbody>
+                  <tr>
+                    <td class="align-middle text-center">
+                      <a
+                        href="#removeModal"
+                        class="text-muted"
+                        data-toggle="modal"
+                        data-target="#removeModal"
+                        data-title="刪除 白頭山：半島浩劫 1 件"
+                        data-backdrop="static"
+                      >
+                        <i class="far fa-trash-alt" aria-hidden="true"></i>
+                      </a>
+                    </td>
+                    <td class="align-middle">白頭山：半島浩劫</td>
+                    <td class="align-middle">1 部</td>
+                    <td class="align-middle text-right">$520</td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle text-center">
+                      <a
+                        href="#removeModal"
+                        class="text-muted"
+                        data-toggle="modal"
+                        data-target="#removeModal"
+                        data-title="刪除 魔物獵人 1"
+                        data-backdrop="static"
+                      >
+                        <i class="far fa-trash-alt" aria-hidden="true"></i>
+                      </a>
+                    </td>
+                    <td class="align-middle">魔物獵人</td>
+                    <td class="align-middle">1部</td>
+                    <td class="align-middle text-right">$300</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a
+                href="./square.html"
+                class="btn btn-outline-secondary btn-block"
+              >
+                <i class="fas fa-shopping-cart fa-lg"></i> 結帳去</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- 詳細資料 -->
+    <section class="container mt-5 h-100">
+      <div class="row text-white">
+        <div class="col-md-5 movie movie2"></div>
+        <div class="col-md-5 d-flex flex-column justify-content-lg-between">
+          <div class="movieInfo">
+            <h2>白頭山：半島浩劫</h2>
+            <h5 class="d-flex align-items-center">
+              類型: <span class="badge badge-success mx-1 p-2">冒險</span>
+            </h5>
+            <p>
+              《白頭山：半島浩劫》故事敘述為了阻止白頭山最後的火山爆發，南北韓將同心協力拯救朝鮮半島！位於中國和北韓邊界的白頭山無預警噴發，破壞力遍及整個朝鮮半島。為了阻止更大規模的災難，地震學家姜奉萊（馬東石
+              飾）提出一個避免白頭山全面噴發的理論，並交付南韓特務趙仁昌（河正宇
+              飾）執行。為了完成任務，趙仁昌還必須尋求北韓軍官李準平（李秉憲
+              飾）的協助，攜手阻止這場即將毀滅整個朝鮮半島的巨大災難……
+            </p>
+          </div>
+          <!-- 價格 -->
+          <div>
+            <div class="d-flex flex-column align-items-end">
+              <del class="text-white"><h5>售價 NT$500</h5></del>
+              <div class="h3 m-0 ml-auto text-danger">
+                <span>特價 NT$</span>
+                <strong>300</strong>
+              </div>
+            </div>
+            <div
+              class="d-flex justify-content-end align-items-end mt-3 btn-group"
+            >
+              <button class="btn btn-outline-light">
+                <i class="far fa-heart"></i>
+                <span class="px-1 mobile">加到我的最愛</span>
+              </button>
+              <button class="btn btn-outline-light">
+                <i class="fas fa-cart-arrow-down"></i>
+                <span class="px-1 mobile">加入購物車</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 最底層 footer -->
+    <!-- <footer class="footer text-muted py-3">
+      <div class="container"></div>
+      <ul class="list-inline d-flex justify-content-center align-items-center">
+        <li class="list-inline-item">
+          © Copyright 2021 週末電影院 純屬練習作品
+        </li>
+        <li class="list-inline-item">
+          <a href="javascript::" class="text-info"
+            ><i class="fab fa-instagram fa-2x"></i
+          ></a>
+        </li>
+        <li class="list-inline-item">
+          <a href="javascript::" class="text-info"
+            ><i class="fab fa-facebook fa-2x"></i
+          ></a>
+        </li>
+      </ul>
+    </footer> -->
+
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="./JS/swiper.js"></script>
+  </body>
+</html>
