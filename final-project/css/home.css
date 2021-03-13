@@ -152,74 +152,35 @@ body {
   z-index: 4;
 }
 
-.navMenu {
-  display: none;
+.menuList {
   font-size: 20px;
+  font-weight: 600;
+}
+
+.menuList .navListLink {
+  padding: 30px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.menuList .navListLink:hover {
+  background: #c6c8ca;
+}
+
+.menuList .navListLink:hover span {
+  color: #000;
 }
 
 @media (max-width: 768px) {
-  .navMenu {
-    display: block;
-  }
-  .navMenu a:nth-child(n) {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+  .menuList .navListLink {
+    padding: 15px;
   }
 }
 
-.navMenu .menuItem {
-  color: #ffc107;
-}
-
-.navMenu :active {
-  background: #ffc107;
-  color: #fff;
-}
-
-.navMenu a,
-.navMenu a:hover,
-.navMenu a:active,
-.navMenu a:visited,
-.navMenu a:focus {
-  text-decoration: none;
-}
-
-.favorite {
-  font-size: 20px;
-}
-
-@media (max-width: 768px) {
-  .favorite {
-    display: none;
-  }
-}
-
-.btnCart {
-  position: relative;
-}
-
-.btnCart .cartTable {
-  z-index: 1;
-}
-
-.btnCart .badge {
-  position: absolute;
-  top: -5px;
-  right: -5px;
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
+.cart {
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
 }
 
 @media (max-width: 768px) {
@@ -247,7 +208,7 @@ body {
 
 @media (max-width: 767px) {
   .listMenu {
-    display: none;
+    margin-bottom: 20px;
   }
 }
 
