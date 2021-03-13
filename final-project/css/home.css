@@ -189,6 +189,23 @@ body {
   }
 }
 
+.btnCart {
+  position: relative;
+}
+
+.btnCart .cartTable {
+  z-index: 1;
+}
+
+.btnCart .badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+
 .dropdownMenu {
   min-width: 300px;
   right: 0;
