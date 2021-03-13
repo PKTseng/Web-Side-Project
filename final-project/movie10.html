@@ -29,137 +29,51 @@
 
   <body>
     <!-- navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top p-0">
       <div class="container">
         <a class="navbar-brand" href="./index.html">
           <img src="./images/logo.png" alt="" class="logo" />
         </a>
-        <!-- RWD 漢堡選單按鈕 -->
-        <button class="navbar-toggler rwdMenu" type="button">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <div class="nav-item">
-              <!-- ------ -->
-              <div class="list-group navMenu" id="myList" role="tablist">
-                <a
-                  class="border border-warning rounded-pill mb-2 py-1 menuItem"
-                  data-toggle="list"
-                  href="#home"
-                  role="tab"
-                  >所有種類</a
-                >
-                <a
-                  class="border border-warning rounded-pill mb-2 py-1 menuItem"
-                  data-toggle="list"
-                  href="#menu-1"
-                  role="tab"
-                  >冒險</a
-                >
-                <a
-                  class="border border-warning rounded-pill mb-2 py-1 menuItem"
-                  data-toggle="list"
-                  href="#menu-2"
-                  role="tab"
-                  >劇情</a
-                >
-                <a
-                  class="border border-warning rounded-pill mb-2 py-1 menuItem"
-                  data-toggle="list"
-                  href="#menu-3"
-                  role="tab"
-                  >動作</a
-                >
-                <a
-                  class="border border-warning rounded-pill mb-2 py-1 menuItem"
-                  data-toggle="list"
-                  href="#menu-4"
-                  role="tab"
-                  >奇幻</a
-                >
-              </div>
 
-              <!-- ------ -->
-              <a class="nav-link favorite" href="./favorite.html">
-                <i class="far fa-heart"></i>
-                我的最愛</a
-              >
-            </div>
-          </div>
-          <!-- 右上幾角購物車 icon -->
-          <div class="dropdown ml-auto cart">
-            <button
-              class="btn btn-sm btnCart text-white"
-              type="button"
-              id="dropdownMenuButton"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              <i class="fas fa-cart-arrow-down fa-3x"></i>
-              <span class="badge badge-pill badge-danger">2</span>
-            </button>
-            <!-- 點選購物車 -->
-            <div
-              class="dropdown-menu p-2 dropdownMenu"
-              aria-labelledby="dropdownMenuButton"
-            >
-              <!-- 購物車表格 -->
-              <table class="table table-sm">
-                <h6 class="mb-3 pt-2">已選擇電影</h6>
-                <tbody>
-                  <tr>
-                    <td class="align-middle text-center">
-                      <a
-                        href="#removeModal"
-                        class="text-muted"
-                        data-toggle="modal"
-                        data-target="#removeModal"
-                        data-title="刪除 白頭山：半島浩劫 1 件"
-                        data-backdrop="static"
-                      >
-                        <i class="far fa-trash-alt" aria-hidden="true"></i>
-                      </a>
-                    </td>
-                    <td class="align-middle">白頭山：半島浩劫</td>
-                    <td class="align-middle">1 部</td>
-                    <td class="align-middle text-right">$520</td>
-                  </tr>
-                  <tr>
-                    <td class="align-middle text-center">
-                      <a
-                        href="#removeModal"
-                        class="text-muted"
-                        data-toggle="modal"
-                        data-target="#removeModal"
-                        data-title="刪除 魔物獵人 1"
-                        data-backdrop="static"
-                      >
-                        <i class="far fa-trash-alt" aria-hidden="true"></i>
-                      </a>
-                    </td>
-                    <td class="align-middle">魔物獵人</td>
-                    <td class="align-middle">1部</td>
-                    <td class="align-middle text-right">$300</td>
-                  </tr>
-                </tbody>
-              </table>
-              <a
-                href="./square.html"
-                class="btn btn-outline-secondary btn-block"
-              >
-                <i class="fas fa-shopping-cart fa-lg"></i> 結帳去</a
-              >
-            </div>
-          </div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto menuList">
+            <li class="nav-item active">
+              <a class="nav-link navListLink" href="./index.html">
+                <span class="itemLink"><i class="fas fa-home"></i></span>
+                <span class="ml-1 itemLink">首頁</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link navListLink" href="./favorite.html">
+                <span><i class="far fa-heart"></i></span>
+                <span class="ml-1"> 我的最愛</span>
+              </a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link navListLink" href="#">
+                <span><i class="fas fa-user-circle"></i></span>
+                <span class="ml-1">登入</span>
+              </a>
+            </li> -->
+          </ul>
         </div>
       </div>
     </nav>
     <!-- 詳細資料 -->
     <section class="container mt-5 h-100">
       <div class="row text-white">
-        <div class="col-md-5 movie movie3"></div>
+        <div class="col-md-5 movie movie10"></div>
         <div class="col-md-5 d-flex flex-column justify-content-lg-between">
           <div class="movieInfo">
             <h2>勝利號</h2>
@@ -167,8 +81,13 @@
               類型: <span class="badge badge-success mx-1 p-2">奇幻</span>
             </h5>
             <p>
-              西元 2092
-              年，四個邊緣人在太空追逐著值錢的垃圾與遙不可及的夢想。他們試圖賣掉一個天真無邪的人型機器人，卻在過程中發掘許多驚天動地的秘密。
+              2092
+              年地球生病了，隨著地球越來越荒涼，人類逐漸無法在此生存。最終人類在太空衛星軌道建立了新的家園
+              UTS（Utopia above the Sky/天空之上的烏托邦）殖民地，但所有人類只有
+              5%
+              能成為殖民地的公民，非公民不是只能留在荒蕪的地球生活，就是成為在宇宙中工作的太空打工仔。在太空中飛行的勝利號，是一艘專門以清潔太空垃圾賺錢的太空船，上面的船員包含為了錢願意做任何事的飛行員泰浩（宋仲基飾）、過去曾帶領過太空海盜的張船長（金泰梨飾）、曾是黑幫老大的現任工程師
+              Tiger
+              朴（陳善奎飾）以及一生的夢想是用魚叉補魚的機器人業童（柳海鎮以動態補捉與聲音來飾演）。某一天這艘專門揀太空垃圾的勝利號，發現了被稱為大規模殺傷性武器的人類機器人「多蘿西」（暫譯），這群急需賺錢的船員們便計畫一項冒險交易，他們決定以「多蘿西」來交換巨額資金。
             </p>
           </div>
           <!-- 價格 -->

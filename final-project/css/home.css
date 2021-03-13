@@ -132,6 +132,14 @@
   background-image: url("../images/movie10.jpg");
 }
 
+.movie11 {
+  background-image: url("../images/movie11.jpg");
+}
+
+.movie12 {
+  background-image: url("../images/movie12.jpg");
+}
+
 body {
   position: relative;
   -webkit-box-sizing: border-box;
