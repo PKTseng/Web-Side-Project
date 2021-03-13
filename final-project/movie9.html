@@ -29,137 +29,51 @@
 
   <body>
     <!-- navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top p-0">
       <div class="container">
         <a class="navbar-brand" href="./index.html">
           <img src="./images/logo.png" alt="" class="logo" />
         </a>
-        <!-- RWD 漢堡選單按鈕 -->
-        <button class="navbar-toggler rwdMenu" type="button">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <div class="nav-item">
-              <!-- ------ -->
-              <div class="list-group navMenu" id="myList" role="tablist">
-                <a
-                  class="border border-warning rounded-pill mb-2 py-1 menuItem"
-                  data-toggle="list"
-                  href="#home"
-                  role="tab"
-                  >所有種類</a
-                >
-                <a
-                  class="border border-warning rounded-pill mb-2 py-1 menuItem"
-                  data-toggle="list"
-                  href="#menu-1"
-                  role="tab"
-                  >冒險</a
-                >
-                <a
-                  class="border border-warning rounded-pill mb-2 py-1 menuItem"
-                  data-toggle="list"
-                  href="#menu-2"
-                  role="tab"
-                  >劇情</a
-                >
-                <a
-                  class="border border-warning rounded-pill mb-2 py-1 menuItem"
-                  data-toggle="list"
-                  href="#menu-3"
-                  role="tab"
-                  >動作</a
-                >
-                <a
-                  class="border border-warning rounded-pill mb-2 py-1 menuItem"
-                  data-toggle="list"
-                  href="#menu-4"
-                  role="tab"
-                  >奇幻</a
-                >
-              </div>
 
-              <!-- ------ -->
-              <a class="nav-link favorite" href="./favorite.html">
-                <i class="far fa-heart"></i>
-                我的最愛</a
-              >
-            </div>
-          </div>
-          <!-- 右上幾角購物車 icon -->
-          <div class="dropdown ml-auto cart">
-            <button
-              class="btn btn-sm btnCart text-white"
-              type="button"
-              id="dropdownMenuButton"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              <i class="fas fa-cart-arrow-down fa-3x"></i>
-              <span class="badge badge-pill badge-danger">2</span>
-            </button>
-            <!-- 點選購物車 -->
-            <div
-              class="dropdown-menu p-2 dropdownMenu"
-              aria-labelledby="dropdownMenuButton"
-            >
-              <!-- 購物車表格 -->
-              <table class="table table-sm">
-                <h6 class="mb-3 pt-2">已選擇電影</h6>
-                <tbody>
-                  <tr>
-                    <td class="align-middle text-center">
-                      <a
-                        href="#removeModal"
-                        class="text-muted"
-                        data-toggle="modal"
-                        data-target="#removeModal"
-                        data-title="刪除 白頭山：半島浩劫 1 件"
-                        data-backdrop="static"
-                      >
-                        <i class="far fa-trash-alt" aria-hidden="true"></i>
-                      </a>
-                    </td>
-                    <td class="align-middle">白頭山：半島浩劫</td>
-                    <td class="align-middle">1 部</td>
-                    <td class="align-middle text-right">$520</td>
-                  </tr>
-                  <tr>
-                    <td class="align-middle text-center">
-                      <a
-                        href="#removeModal"
-                        class="text-muted"
-                        data-toggle="modal"
-                        data-target="#removeModal"
-                        data-title="刪除 魔物獵人 1"
-                        data-backdrop="static"
-                      >
-                        <i class="far fa-trash-alt" aria-hidden="true"></i>
-                      </a>
-                    </td>
-                    <td class="align-middle">魔物獵人</td>
-                    <td class="align-middle">1部</td>
-                    <td class="align-middle text-right">$300</td>
-                  </tr>
-                </tbody>
-              </table>
-              <a
-                href="./square.html"
-                class="btn btn-outline-secondary btn-block"
-              >
-                <i class="fas fa-shopping-cart fa-lg"></i> 結帳去</a
-              >
-            </div>
-          </div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto menuList">
+            <li class="nav-item active">
+              <a class="nav-link navListLink" href="./index.html">
+                <span class="itemLink"><i class="fas fa-home"></i></span>
+                <span class="ml-1 itemLink">首頁</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link navListLink" href="./favorite.html">
+                <span><i class="far fa-heart"></i></span>
+                <span class="ml-1"> 我的最愛</span>
+              </a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link navListLink" href="#">
+                <span><i class="fas fa-user-circle"></i></span>
+                <span class="ml-1">登入</span>
+              </a>
+            </li> -->
+          </ul>
         </div>
       </div>
     </nav>
     <!-- 詳細資料 -->
     <section class="container mt-5 h-100">
       <div class="row text-white">
-        <div class="col-md-5 movie movie3"></div>
+        <div class="col-md-5 movie movie9"></div>
         <div class="col-md-5 d-flex flex-column justify-content-lg-between">
           <div class="movieInfo">
             <h2>龍之心：致命復仇</h2>
