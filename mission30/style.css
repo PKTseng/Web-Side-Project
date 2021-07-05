@@ -41,7 +41,7 @@ body {
   border-bottom: 1px solid var(--border-color);
 }
 
-.draggable-list .number {
+.data-dragIndex .number {
   background-color: #fdcb6e;
   display: flex;
   align-items: center;
@@ -92,4 +92,13 @@ body {
 
 .check-btn:focus {
   outline: none;
+}
+
+.containerDrag {
+  display: flex;
+}
+
+.dragIndex li {
+  display: flex;
+  flex-direction: column;
 }
